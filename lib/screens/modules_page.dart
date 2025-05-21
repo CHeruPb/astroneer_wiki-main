@@ -46,6 +46,7 @@ class ModulePage extends StatelessWidget {
                         Text('${module.description}'),
                         Text('Требуемый принтер: ${module.printerLevel}'),
                         Text('Категория: ${module.category}'),
+                        Text('Стоимость разблокировки: ${module.bytesCost} байт'),
                       ],
                     ),
                   ),

@@ -32,6 +32,7 @@ class PlanetDetailPage extends StatelessWidget {
                       SizedBox(height: 8),
                       Center(
                         child: Text(
+                          textAlign: TextAlign.justify,
                           planet.description,
                           style: TextStyle(color: Colors.white),
                         ),
