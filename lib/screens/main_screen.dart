@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project/widgets/models.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -13,7 +14,7 @@ class HomeScreen extends StatelessWidget {
       ),
       _MenuItem(
         title: 'Ресурсы',
-        imagePath: 'assets/images/copper.png',
+        imagePath: organicIcon,
         onTap: () => Navigator.pushNamed(context, '/resources'),
       ),
       _MenuItem(

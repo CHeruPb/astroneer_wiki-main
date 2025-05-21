@@ -242,20 +242,138 @@ class Resource {
 
 final List<Resource> exampleResources = [
   Resource(
-    name: 'Малахит',
-    image: 'assets/icons/malachite.png',
+    name: 'Соединение',
+    image: compoundIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
     obtainedFrom: 'Планеты: Сильва, Калидор',
     usedIn: ['Плавильная печь', 'Средний генератор'],
     category: 'Природный',
   ),
+  
   Resource(
-    name: 'Медь',
-    image: 'assets/images/copper.png',
-    description: 'Переплавленный ресурс, получаемый из малахита.',
-    obtainedFrom: 'Плавильная печь',
-    usedIn: ['Платформы', 'Электронные устройства'],
-    category: 'Переплавленный',
+    name: 'Смола',
+    image: resinIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Природный',
+  ),
+  
+  Resource(
+    name: 'Глина',
+    image: clayIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Природный',
+  ),
+  
+  Resource(
+    name: 'Графит',
+    image: graphiteIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Природный',
+  ),
+  
+  Resource(
+    name: 'Латерит',
+    image: lateriteIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Природный',
+  ),
+  
+  Resource(
+    name: 'Гематит',
+    image: hematiteIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Природный',
+  ),
+  
+  Resource(
+    name: 'Литий',
+    image: lithiumIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Природный',
+  ),
+
+  Resource(
+    name: 'Малахит',
+    image: malachiteIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Природный',
+  ),
+    
+  Resource(
+    name: 'Органика',
+    image: organicIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Природный',
+  ),
+  
+  Resource(
+    name: 'Кварц',
+    image: quartzIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Природный',
+  ),
+  
+  Resource(
+    name: 'Сфалерит',
+    image: sphaleriteIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Природный',
+  ),
+  
+  Resource(
+    name: 'Титанит',
+    image: titaniteIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Природный',
+  ),
+  
+  Resource(
+    name: 'Вольфрамит',
+    image: wolframiteIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Природный',
+  ),
+  
+  Resource(
+    name: 'Аммоний',
+    image: ammoniumIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Природный',
+  ),
+  
+  Resource(
+    name: 'Астрониум',
+    image: astroniumIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Природный',
   ),
 ];
 
@@ -300,6 +418,19 @@ final String titaniumIcon = 'assets/icons/titanium.png';
 final String tungstenIcon = 'assets/icons/tungsten.png';
 final String zincIcon = 'assets/icons/zinc.png';
 
+final String aluminiumAlloyIcon = 'assets/icons/aluminium_alloy.png';
+final String diamondIcon = 'assets/icons/diamond.png';
+final String explosivePowderIcon = 'assets/icons/explosive_powder.png';
+final String grapheneIcon = 'assets/icons/graphene.png';
+final String hydrazineIcon = 'assets/icons/hydrazine.png';
+final String nanocarbonAlloyIcon = 'assets/icons/nanocarbon_alloy.png';
+final String plasticIcon = 'assets/icons/plastic.png';
+final String rubberIcon = 'assets/icons/rubber.png';
+final String siliconeIcon = 'assets/icons/silicone.png';
+final String steelIcon = 'assets/icons/steel.png';
+final String titaniumAlloyIcon = 'assets/icons/titanium_alloy.png';
+final String tungstenCarbideIcon = 'assets/icons/tungsten_carbide.png';
+
 final List<Ingredient> allIngredients = [
   Ingredient(iconPath: compoundIcon, name: 'Соединение'),
   Ingredient(iconPath: resinIcon, name: 'Смола'),
@@ -334,6 +465,19 @@ final List<Ingredient> allIngredients = [
   Ingredient(iconPath: titaniumIcon, name: 'Титан'),
   Ingredient(iconPath: tungstenIcon, name: 'Вольфрам'),
   Ingredient(iconPath: zincIcon, name: 'Цинк'),
+
+  Ingredient(iconPath: aluminiumAlloyIcon, name: 'Алюминиевый сплав'),
+  Ingredient(iconPath: diamondIcon, name: 'Алмаз'),
+  Ingredient(iconPath: explosivePowderIcon, name: 'Порох'),
+  Ingredient(iconPath: grapheneIcon, name: 'Графен'),
+  Ingredient(iconPath: hydrazineIcon, name: 'Гидразин'),
+  Ingredient(iconPath: nanocarbonAlloyIcon, name: 'Наноуглеродный сплав'),
+  Ingredient(iconPath: plasticIcon, name: 'Пластик'),
+  Ingredient(iconPath: rubberIcon, name: 'Резина'),
+  Ingredient(iconPath: siliconeIcon, name: 'Силикон'),
+  Ingredient(iconPath: steelIcon, name: 'Сталь'),
+  Ingredient(iconPath: titaniumAlloyIcon, name: 'Титановый сплав'),
+  Ingredient(iconPath: tungstenCarbideIcon, name: 'Карбид вольфрама'),
 ];
 
 final Ingredient nothing = allIngredients[21];
@@ -369,6 +513,19 @@ final Ingredient iron = allIngredients[26];
 final Ingredient titanium = allIngredients[27];
 final Ingredient tungsten = allIngredients[28];
 final Ingredient zinc = allIngredients[29];
+
+final Ingredient aluminiumAlloy = allIngredients[30];
+final Ingredient diamond = allIngredients[31];
+final Ingredient explosivePowder = allIngredients[32];
+final Ingredient graphene = allIngredients[33];
+final Ingredient hydrazine = allIngredients[34];
+final Ingredient nanocarbonAlloy = allIngredients[35];
+final Ingredient plastic = allIngredients[36];
+final Ingredient rubber = allIngredients[37];
+final Ingredient silicone = allIngredients[38];
+final Ingredient steel = allIngredients[39];
+final Ingredient titaniumAlloy = allIngredients[40];
+final Ingredient tungstenCarbide = allIngredients[41];
 
 class CraftableModule {
   final String name;

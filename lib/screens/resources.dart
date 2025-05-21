@@ -10,12 +10,12 @@ class ResourcesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Известные категории
-    const knownCategories = ['Природный', 'Переплавленный', 'Сложный', 'Газ'];
+    const knownCategories = ['Природный', 'Очищенный', 'Сложный', 'Газ'];
 
     // Группировка
     final Map<String, List<Resource>> grouped = {
       'Природный': [],
-      'Переплавленный': [],
+      'Очищенный': [],
       'Сложный': [],
       'Газы': [],
       'Прочие ресурсы': [],
