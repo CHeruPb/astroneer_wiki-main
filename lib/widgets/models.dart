@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class Planet {
   final String name;
   final String type;
+  final String icon;
   final String image;
   final String description;
   final List<Ingredient> mainResourse;
@@ -20,6 +21,7 @@ class Planet {
   Planet({
     required this.name,
     required this.type,
+    required this.icon,
     required this.image,
     required this.description,
     required this.mainResourse,
@@ -40,6 +42,7 @@ List<Planet> planets = [
     Planet(
       name: 'Сильва',
       type: 'Земная',
+      icon: sylvaIcon,
       image: 'assets/images/sylva.png',
       description: 'Начальная планета с умеренным климатом.',
       mainResourse: [sphalerite, malachite],
@@ -57,6 +60,7 @@ List<Planet> planets = [
     Planet(
       name: 'Дезоло',
       type: 'Земной спутник',
+      icon: desoloIcon,
       image: 'assets/images/desolo.png',
       description: 'Бесплодная, безатмосферная планета, спутник Сильвы.',
       mainResourse: [wolframite, sphalerite],
@@ -69,11 +73,12 @@ List<Planet> planets = [
       wind: 'Плохо',
       powerRequired: '8U/s',
       gatewayImage: 'assets/images/gateway_desolo.png',
-      gatewayResouce: clay,
+      gatewayResouce: zinc,
     ),
     Planet(
       name: 'Калидор',
       type: 'Засушливый',
+      icon: calidorIcon,
       image: 'assets/images/cal.png',
       description: 'Пустынная планета с большим количеством солнечной энергии.',
       mainResourse: [wolframite, malachite],
@@ -86,11 +91,12 @@ List<Planet> planets = [
       wind: 'Плохо',
       powerRequired: '12U/s',
       gatewayImage: 'assets/images/gateway_calidor.png',
-      gatewayResouce: clay,
+      gatewayResouce: explosivePowder,
     ),
     Planet(
       name: 'Везания',
       type: 'Экзотическая',
+      icon: vesaniaIcon,
       image: 'assets/images/vesania.png',
       description: 'Одна из самых ярких планет, густая и пышная атмосфера, разнообразная и необычная местность.',
       mainResourse: [lithium, titanite],
@@ -103,11 +109,12 @@ List<Planet> planets = [
       wind: 'Отлично',
       powerRequired: '16U/s',
       gatewayImage: 'assets/images/gateway_vesania.png',
-      gatewayResouce: clay,
+      gatewayResouce: graphene,
     ),
     Planet(
       name: 'Новус',
       type: 'Экзотический спутник',
+      icon: novusIcon,
       image: 'assets/images/novus.png',
       description: 'Также одна из самых ярких планет в Astroneer, с её тонкой туманной атмосферой и пурпурной, покрытой лесами и кратерами местностью.',
       mainResourse: [lithium, hematite, laterite],
@@ -120,11 +127,12 @@ List<Planet> planets = [
       wind: 'Хорошо',
       powerRequired: '22U/s',
       gatewayImage: 'assets/images/gateway_novus.png',
-      gatewayResouce: clay,
+      gatewayResouce: silicone,
     ),
     Planet(
       name: 'Гласио',
       type: 'Тундровая',
+      icon: glacioIcon,
       image: 'assets/images/glacio.png',
       description: 'Планета с тонкой атмосферой, сильными ветрами и ледяныим горами',
       mainResourse: [titanite, hematite],
@@ -137,11 +145,12 @@ List<Planet> planets = [
       wind: 'Отлично',
       powerRequired: '26U/s',
       gatewayImage: 'assets/images/gateway_glasio.png',
-      gatewayResouce: clay,
+      gatewayResouce: diamond,
     ),
     Planet(
       name: 'Атрокс',
       type: 'Радиоактивная',
+      icon: atroxIcon,
       image: 'assets/images/atrox.png',
       description: 'Планета с ядовитой атмосферой, а за коварными кратерами скрывается очень агрессивная флора.',
       mainResourse: [nothing],
@@ -154,11 +163,12 @@ List<Planet> planets = [
       wind: 'Очень плохо',
       powerRequired: '30U/s',
       gatewayImage: 'assets/images/gateway_calidor.png',
-      gatewayResouce: clay,
+      gatewayResouce: hydrogen,
     ),
     Planet(
       name: 'Эолуз',
       type: 'Глючная',
+      icon: aeoluzIcon,
       image: 'assets/images/aeoluz.png',
       description: 'Смесь оригинальных планет, но со Штормами, новыми типами пещер, подземными регионами и новым ядром',
       mainResourse: [ammonium, clay, compound, graphite, hematite, laterite, lithium, malachite, organic, quartz, resin, sphalerite, titanite, wolframite, astronium],
@@ -224,6 +234,7 @@ final List<SpecialLocation> specialLocations = [
 
 class Resource {
   final String name;
+  final String icon;
   final String image;
   final String description;
   final String obtainedFrom; // Где или как получить
@@ -232,6 +243,7 @@ class Resource {
 
   Resource({
     required this.name,
+    required this.icon,
     required this.image,
     required this.description,
     required this.obtainedFrom,
@@ -243,6 +255,7 @@ class Resource {
 final List<Resource> exampleResources = [
   Resource(
     name: 'Соединение',
+    icon: compoundIcon,
     image: compoundIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
     obtainedFrom: 'Планеты: Сильва, Калидор',
@@ -252,6 +265,7 @@ final List<Resource> exampleResources = [
   
   Resource(
     name: 'Смола',
+    icon: resinIcon,
     image: resinIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
     obtainedFrom: 'Планеты: Сильва, Калидор',
@@ -261,6 +275,7 @@ final List<Resource> exampleResources = [
   
   Resource(
     name: 'Глина',
+    icon: clayIcon,
     image: clayIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
     obtainedFrom: 'Планеты: Сильва, Калидор',
@@ -270,6 +285,7 @@ final List<Resource> exampleResources = [
   
   Resource(
     name: 'Графит',
+    icon: graphiteIcon,
     image: graphiteIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
     obtainedFrom: 'Планеты: Сильва, Калидор',
@@ -279,6 +295,7 @@ final List<Resource> exampleResources = [
   
   Resource(
     name: 'Латерит',
+    icon: lateriteIcon,
     image: lateriteIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
     obtainedFrom: 'Планеты: Сильва, Калидор',
@@ -288,6 +305,7 @@ final List<Resource> exampleResources = [
   
   Resource(
     name: 'Гематит',
+    icon: hematiteIcon,
     image: hematiteIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
     obtainedFrom: 'Планеты: Сильва, Калидор',
@@ -297,6 +315,7 @@ final List<Resource> exampleResources = [
   
   Resource(
     name: 'Литий',
+    icon: lithiumIcon,
     image: lithiumIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
     obtainedFrom: 'Планеты: Сильва, Калидор',
@@ -306,6 +325,7 @@ final List<Resource> exampleResources = [
 
   Resource(
     name: 'Малахит',
+    icon: malachiteIcon,
     image: malachiteIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
     obtainedFrom: 'Планеты: Сильва, Калидор',
@@ -315,6 +335,7 @@ final List<Resource> exampleResources = [
     
   Resource(
     name: 'Органика',
+    icon: organicIcon,
     image: organicIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
     obtainedFrom: 'Планеты: Сильва, Калидор',
@@ -324,6 +345,7 @@ final List<Resource> exampleResources = [
   
   Resource(
     name: 'Кварц',
+    icon: quartzIcon,
     image: quartzIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
     obtainedFrom: 'Планеты: Сильва, Калидор',
@@ -333,6 +355,7 @@ final List<Resource> exampleResources = [
   
   Resource(
     name: 'Сфалерит',
+    icon: sphaleriteIcon,
     image: sphaleriteIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
     obtainedFrom: 'Планеты: Сильва, Калидор',
@@ -342,6 +365,7 @@ final List<Resource> exampleResources = [
   
   Resource(
     name: 'Титанит',
+    icon: titaniteIcon,
     image: titaniteIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
     obtainedFrom: 'Планеты: Сильва, Калидор',
@@ -351,6 +375,7 @@ final List<Resource> exampleResources = [
   
   Resource(
     name: 'Вольфрамит',
+    icon: wolframiteIcon,
     image: wolframiteIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
     obtainedFrom: 'Планеты: Сильва, Калидор',
@@ -360,6 +385,7 @@ final List<Resource> exampleResources = [
   
   Resource(
     name: 'Аммоний',
+    icon: ammoniumIcon,
     image: ammoniumIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
     obtainedFrom: 'Планеты: Сильва, Калидор',
@@ -369,11 +395,302 @@ final List<Resource> exampleResources = [
   
   Resource(
     name: 'Астрониум',
+    icon: astroniumIcon,
     image: astroniumIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
     obtainedFrom: 'Планеты: Сильва, Калидор',
     usedIn: ['Плавильная печь', 'Средний генератор'],
     category: 'Природный',
+  ),
+  
+  Resource(
+    name: 'Аргон',
+    icon: argoneIcon,
+    image: argoneIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Газ',
+  ),
+
+  Resource(
+    name: 'Метан',
+    icon: metaneIcon,
+    image: metaneIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Газ',
+  ),
+
+  Resource(
+    name: 'Водород',
+    icon: hydrogenIcon,
+    image: hydrogenIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Газ',
+  ),
+
+  Resource(
+    name: 'Азот',
+    icon: nitrogenIcon,
+    image: nitrogenIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Газ',
+  ),
+  
+  Resource(
+    name: 'Гелий',
+    icon: heliumIcon,
+    image: heliumIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Газ',
+  ),
+
+  Resource(
+    name: 'Сера',
+    icon: sulfurIcon,
+    image: sulfurIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Газ',
+  ),
+  
+  Resource(
+    name: 'Керамика',
+    icon: ceramicsIcon,
+    image: ceramicsIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Очищенный',
+  ),
+
+  Resource(
+    name: 'Углерод',
+    icon: carbonIcon,
+    image: carbonIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Очищенный',
+  ),
+
+  Resource(
+    name: 'Медь',
+    icon: copperIcon,
+    image: copperIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Очищенный',
+  ),
+
+  Resource(
+    name: 'Стекло',
+    icon: glassIcon,
+    image: glassIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Очищенный',
+  ),
+
+  Resource(
+    name: 'Железо',
+    icon: ironIcon,
+    image: ironIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Очищенный',
+  ),
+
+  Resource(
+    name: 'Титан',
+    icon: titaniumIcon,
+    image: titaniumIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Очищенный',
+  ),
+
+  Resource(
+    name: 'Вольфрам',
+    icon: tungstenIcon,
+    image: tungstenIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Очищенный',
+  ),
+
+  Resource(
+    name: 'Цинк',
+    icon: zincIcon,
+    image: zincIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Очищенный',
+  ),
+
+  Resource(
+    name: 'Алюминиевый сплав',
+    icon: aluminiumAlloyIcon,
+    image: aluminiumAlloyIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Сложный',
+  ),
+
+  Resource(
+    name: 'Алмаз',
+    icon: diamondIcon,
+    image: diamondIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Сложный',
+  ),
+
+  Resource(
+    name: 'Порох',
+    icon: explosivePowderIcon,
+    image: explosivePowderIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Сложный',
+  ),
+
+  Resource(
+    name: 'Графен',
+    icon: grapheneIcon,
+    image: grapheneIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Сложный',
+  ),
+
+  Resource(
+    name: 'Гидразин',
+    icon: hydrazineIcon,
+    image: hydrazineIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Сложный',
+  ),
+
+  Resource(
+    name: 'Наноуглеродный сплав',
+    icon: nanocarbonAlloyIcon,
+    image: nanocarbonAlloyIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Сложный',
+  ),
+
+  Resource(
+    name: 'Пластик',
+    icon: plasticIcon,
+    image: plasticIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Сложный',
+  ),
+
+  Resource(
+    name: 'Резина',
+    icon: rubberIcon,
+    image: rubberIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Сложный',
+  ),
+
+  Resource(
+    name: 'Силикон',
+    icon: siliconeIcon,
+    image: siliconeIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Сложный',
+  ),
+
+  Resource(
+    name: 'Сталь',
+    icon: steelIcon,
+    image: steelIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Сложный',
+  ),
+
+  Resource(
+    name: 'Титановый сплав',
+    icon: titaniumAlloyIcon,
+    image: titaniumAlloyIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Сложный',
+  ),
+
+  Resource(
+    name: 'Карбид вольфрама',
+    icon: tungstenCarbideIcon,
+    image: tungstenCarbideIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Сложный',
+  ),
+
+  Resource(
+    name: 'Почва',
+    icon: soilIcon,
+    image: soilIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'Природный',
+  ),
+
+  Resource(
+    name: 'EXO чип',
+    icon: exoChipIcon,
+    image: exoChipIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'ыВВ',
+  ),
+
+  Resource(
+    name: 'Лом',
+    icon: scrapIcon,
+    image: scrapIcon,
+    description: 'Малахит — природный ресурс, используется для получения меди.',
+    obtainedFrom: 'Планеты: Сильва, Калидор',
+    usedIn: ['Плавильная печь', 'Средний генератор'],
+    category: 'СложыВВВЫный',
   ),
 ];
 
@@ -384,6 +701,14 @@ class Ingredient {
   Ingredient({required this.iconPath, required this.name});
 }
 
+final String sylvaIcon = 'assets/icons/sylvaI.png';
+final String desoloIcon = 'assets/icons/desoloI.png';
+final String calidorIcon = 'assets/icons/calI.png';
+final String vesaniaIcon = 'assets/icons/vesaniaI.png';
+final String novusIcon = 'assets/icons/novusI.png';
+final String atroxIcon = 'assets/icons/atroxI.png';
+final String glacioIcon = 'assets/icons/glasioI.png';
+final String aeoluzIcon = 'assets/icons/aeoluzI.png';
 final String nothingIcon = 'assets/icons/nothing.png';
 
 final String compoundIcon = 'assets/icons/compound.png';
@@ -430,6 +755,10 @@ final String siliconeIcon = 'assets/icons/silicone.png';
 final String steelIcon = 'assets/icons/steel.png';
 final String titaniumAlloyIcon = 'assets/icons/titanium_alloy.png';
 final String tungstenCarbideIcon = 'assets/icons/tungsten_carbide.png';
+
+final String soilIcon = 'assets/icons/soil.png';
+final String exoChipIcon = 'assets/icons/exo_chip.png';
+final String scrapIcon = 'assets/icons/scrap.png';
 
 final List<Ingredient> allIngredients = [
   Ingredient(iconPath: compoundIcon, name: 'Соединение'),
@@ -478,6 +807,10 @@ final List<Ingredient> allIngredients = [
   Ingredient(iconPath: steelIcon, name: 'Сталь'),
   Ingredient(iconPath: titaniumAlloyIcon, name: 'Титановый сплав'),
   Ingredient(iconPath: tungstenCarbideIcon, name: 'Карбид вольфрама'),
+
+  Ingredient(iconPath: soilIcon, name: 'Почва'),
+  Ingredient(iconPath: exoChipIcon, name: 'EXO чип'),
+  Ingredient(iconPath: scrapIcon, name: 'Лом'),
 ];
 
 final Ingredient nothing = allIngredients[21];
@@ -526,6 +859,10 @@ final Ingredient silicone = allIngredients[38];
 final Ingredient steel = allIngredients[39];
 final Ingredient titaniumAlloy = allIngredients[40];
 final Ingredient tungstenCarbide = allIngredients[41];
+
+final Ingredient soil = allIngredients[42];
+final Ingredient exoChip = allIngredients[43];
+final Ingredient scrap = allIngredients[44];
 
 class CraftableModule {
   final String name;

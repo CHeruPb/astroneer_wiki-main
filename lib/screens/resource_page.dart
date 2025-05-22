@@ -24,9 +24,11 @@ class ResourceDetailPage extends StatelessWidget {
             RequirementTab(
               title: resource.name,
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Image.asset(resource.image),
+                Center(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: Image.asset(resource.image),
+                  ),
                 ),
               ],
             ),

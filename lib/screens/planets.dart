@@ -80,8 +80,9 @@ class LocationsScreen extends StatelessWidget {
                               height: 150,
                               width: 150,
                               child: Image.asset(
-                                planet.image,
-                                fit: BoxFit.cover,
+                                planet.icon,
+                                width: 100,
+                                height: 100,
                               ),
                             ),
                           ),
