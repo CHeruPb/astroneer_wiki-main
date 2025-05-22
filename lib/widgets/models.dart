@@ -301,9 +301,9 @@ final List<SpecialLocation> specialLocations = [
     function: 'Финальная активация. Завершает сюжет.',
     requirements: [
       'Активировать ядра всех планет',
-      'Вставить 3 геометрических трекера',
+      'Вставить 7 геометрических триптиха',
     ],
-    loreNote: 'Предположительно, часть древней транспортной системы.',
+    loreNote: '',
   ),
   SpecialLocation(
     name: 'Солнечная комната',
@@ -1510,7 +1510,7 @@ class CraftableModule {
   final String description;
   final String image;
   final String icon;
-  final String bytesCost;
+  final String byteCost;
   final List<Ingredient> ingredients;
   final String printerLevel;
   final String category;
@@ -1520,7 +1520,7 @@ class CraftableModule {
     required this.description,
     required this.image,
     required this.icon,
-    required this.bytesCost,
+    required this.byteCost,
     required this.ingredients,
     required this.printerLevel,
     required this.category,
@@ -1533,9 +1533,9 @@ final List<CraftableModule> modules = [
     description: "Чета делает",
     image: "assets/images/vesania.png",
     icon: "assets/images/vesania.png",
-    bytesCost: '500',
+    byteCost: '500',
     ingredients: [malachite, malachite, astronium],
     printerLevel: "Большой",
-    category: "Хз",
+    category: "Прочее",
   ),
 ];

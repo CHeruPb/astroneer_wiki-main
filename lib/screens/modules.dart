@@ -21,6 +21,7 @@ class _GameItemsScreenState extends State<GameItemsScreen> {
     'Модули',
     'Дополнения',
     'Мощность',
+    'Прочее',
   ];
   List<String> printers = ['Портативный', 'Маленький', 'Средний', 'Большой'];
 
@@ -68,47 +69,41 @@ class _GameItemsScreenState extends State<GameItemsScreen> {
               );
             },
             child: Container(
-                    decoration: BoxDecoration(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: Colors.lightBlueAccent, width: 2),
+                color: Color(0xff0050e7),
+              ),
+              child: Stack(
+                children: [
+                  Center(
+                    child: ClipRRect(
                       borderRadius: BorderRadius.circular(12),
-                      border: Border.all(
-                        color: Colors.lightBlueAccent,
-                        width: 2,
+                      child: SizedBox(
+                        height: 120,
+                        width: 120,
+                        child: Image.asset(item.image, fit: BoxFit.cover),
                       ),
-                      color: Color(0xff0050e7),
-                    ),
-                    child: Stack(
-                      children: [
-                        Center(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(12),
-                            child: SizedBox(
-                              height: 120,
-                              width: 120,
-                              child: Image.asset(
-                                item.image,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Padding(
-                            padding: const EdgeInsets.only(bottom: 6),
-                            child: Text(
-                              item.name,
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
                     ),
                   ),
+                  Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 6),
+                      child: Text(
+                        item.name,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           );
         },
       ),
@@ -183,7 +178,6 @@ class _GameItemsScreenState extends State<GameItemsScreen> {
                       Navigator.pop(context);
                     },
                     child: const Text('Сбросить фильтры'),
-                  
                   ),
                   const SizedBox(height: 12),
                 ],
