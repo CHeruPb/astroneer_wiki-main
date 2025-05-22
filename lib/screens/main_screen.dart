@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
     final List<_MenuItem> menuItems = [
       _MenuItem(
         title: 'Космические объекты',
-        imagePath: 'assets/images/sylva.png',
+        imagePath: sylvaIcon,
         onTap: () => Navigator.pushNamed(context, '/planets'),
       ),
       _MenuItem(
@@ -72,12 +72,8 @@ class _MenuItem {
       onTap: onTap,
       child: Stack(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(16),
-            child: Center(
-              child: Image.asset(imagePath, fit: BoxFit.cover, width: 256),
-            ),
-          ),
+          Center(child: Image.asset(imagePath, fit: BoxFit.cover, width: 256)),
+
           Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:project/widgets/bullets.dart';
+import 'package:project/widgets/ingredients_list.dart';
 
 class Planet {
   final String name;
@@ -39,165 +41,246 @@ class Planet {
 }
 
 List<Planet> planets = [
-    Planet(
-      name: 'Сильва',
-      type: 'Земная',
-      icon: sylvaIcon,
-      image: 'assets/images/sylva.png',
-      description: 'Начальная планета с умеренным климатом.',
-      mainResourse: [sphalerite, malachite],
-      secondaryResourse: [graphite, quartz, laterite, ammonium, compound, resin, astronium],
-      gases: [hydrogen, nitrogen],
-      difficulty: 'Легкая',
-      scale: 'Большая',
-      dayLength: '12 мин',
-      sun: 'Хорошо',
-      wind: 'Средне',
-      powerRequired: '5U/s',
-      gatewayImage: 'assets/images/gateway_sylva.png',
-      gatewayResouce: quartz,
-    ),
-    Planet(
-      name: 'Дезоло',
-      type: 'Земной спутник',
-      icon: desoloIcon,
-      image: 'assets/images/desolo.png',
-      description: 'Бесплодная, безатмосферная планета, спутник Сильвы.',
-      mainResourse: [wolframite, sphalerite],
-      secondaryResourse:[quartz, clay, ammonium, laterite, graphite, compound, resin, astronium],
-      gases: [nothing],
-      difficulty: 'Легкая',
-      scale: 'Малая',
-      dayLength: '1 мин 55 сек',
-      sun: 'Отлично',
-      wind: 'Плохо',
-      powerRequired: '8U/s',
-      gatewayImage: 'assets/images/gateway_desolo.png',
-      gatewayResouce: zinc,
-    ),
-    Planet(
-      name: 'Калидор',
-      type: 'Засушливый',
-      icon: calidorIcon,
-      image: 'assets/images/cal.png',
-      description: 'Пустынная планета с большим количеством солнечной энергии.',
-      mainResourse: [wolframite, malachite],
-      secondaryResourse: [laterite, ammonium, compound, graphite, resin, quartz, clay, astronium],
-      gases: [hydrogen, sulfur],
-      difficulty: 'Средняя',
-      scale: 'Средний',
-      dayLength: '8 мин',
-      sun: 'Отлично',
-      wind: 'Плохо',
-      powerRequired: '12U/s',
-      gatewayImage: 'assets/images/gateway_calidor.png',
-      gatewayResouce: explosivePowder,
-    ),
-    Planet(
-      name: 'Везания',
-      type: 'Экзотическая',
-      icon: vesaniaIcon,
-      image: 'assets/images/vesania.png',
-      description: 'Одна из самых ярких планет, густая и пышная атмосфера, разнообразная и необычная местность.',
-      mainResourse: [lithium, titanite],
-      secondaryResourse: [graphite, laterite, clay, quartz, compound, resin, astronium],
-      gases: [hydrogen, argone, nitrogen],
-      difficulty: 'Средняя',
-      scale: 'Средняя',
-      dayLength: '13 мин 30 сек',
-      sun: 'Плохо',
-      wind: 'Отлично',
-      powerRequired: '16U/s',
-      gatewayImage: 'assets/images/gateway_vesania.png',
-      gatewayResouce: graphene,
-    ),
-    Planet(
-      name: 'Новус',
-      type: 'Экзотический спутник',
-      icon: novusIcon,
-      image: 'assets/images/novus.png',
-      description: 'Также одна из самых ярких планет в Astroneer, с её тонкой туманной атмосферой и пурпурной, покрытой лесами и кратерами местностью.',
-      mainResourse: [lithium, hematite, laterite],
-      secondaryResourse: [compound, quartz, resin, graphite, ammonium, clay, astronium],
-      gases: [metane, hydrogen],
-      difficulty: 'Средняя',
-      scale: 'Маленький',
-      dayLength: '3 мин 30 сек',
-      sun: 'Крайне отлично',
-      wind: 'Хорошо',
-      powerRequired: '22U/s',
-      gatewayImage: 'assets/images/gateway_novus.png',
-      gatewayResouce: silicone,
-    ),
-    Planet(
-      name: 'Гласио',
-      type: 'Тундровая',
-      icon: glacioIcon,
-      image: 'assets/images/glacio.png',
-      description: 'Планета с тонкой атмосферой, сильными ветрами и ледяныим горами',
-      mainResourse: [titanite, hematite],
-      secondaryResourse: [laterite, graphite, quartz, ammonium, compound, resin, astronium],
-      gases: [argone],
-      difficulty: 'Высокая',
-      scale: 'Средняя',
-      dayLength: '20 мин',
-      sun: 'Плохо',
-      wind: 'Отлично',
-      powerRequired: '26U/s',
-      gatewayImage: 'assets/images/gateway_glasio.png',
-      gatewayResouce: diamond,
-    ),
-    Planet(
-      name: 'Атрокс',
-      type: 'Радиоактивная',
-      icon: atroxIcon,
-      image: 'assets/images/atrox.png',
-      description: 'Планета с ядовитой атмосферой, а за коварными кратерами скрывается очень агрессивная флора.',
-      mainResourse: [nothing],
-      secondaryResourse: [graphite, laterite, quartz, compound, resin, ammonium, clay, astronium],
-      gases: [metane, nitrogen, sulfur, helium],
-      difficulty: 'Крайне высокая',
-      scale: 'Средний',
-      dayLength: '20 мин',
-      sun: 'Плохо',
-      wind: 'Очень плохо',
-      powerRequired: '30U/s',
-      gatewayImage: 'assets/images/gateway_calidor.png',
-      gatewayResouce: hydrogen,
-    ),
-    Planet(
-      name: 'Эолуз',
-      type: 'Глючная',
-      icon: aeoluzIcon,
-      image: 'assets/images/aeoluz.png',
-      description: 'Смесь оригинальных планет, но со Штормами, новыми типами пещер, подземными регионами и новым ядром',
-      mainResourse: [ammonium, clay, compound, graphite, hematite, laterite, lithium, malachite, organic, quartz, resin, sphalerite, titanite, wolframite, astronium],
-      secondaryResourse: [nothing],
-      gases: [argone, helium, hydrogen, metane, nitrogen, sulfur],
-      difficulty: 'Средняя',
-      scale: 'Очень большая',
-      dayLength: '9 мин',
-      sun: 'Ниже среднего',
-      wind: 'Средне',
-      powerRequired: 'Не имеет привычного ядра, и врат',
-      gatewayImage: 'assets/icons/nothing.png',
-      gatewayResouce: nothing
-    ),
-  ];
-
+  Planet(
+    name: 'Сильва',
+    type: 'Земная',
+    icon: sylvaIcon,
+    image: 'assets/images/sylva.png',
+    description: 'Начальная планета с умеренным климатом.',
+    mainResourse: [sphalerite, malachite],
+    secondaryResourse: [
+      graphite,
+      quartz,
+      laterite,
+      ammonium,
+      compound,
+      resin,
+      astronium,
+    ],
+    gases: [hydrogen, nitrogen],
+    difficulty: 'Легкая',
+    scale: 'Большая',
+    dayLength: '12 мин',
+    sun: 'Хорошо',
+    wind: 'Средне',
+    powerRequired: '5U/s',
+    gatewayImage: 'assets/images/gateway_sylva.png',
+    gatewayResouce: quartz,
+  ),
+  Planet(
+    name: 'Дезоло',
+    type: 'Земной спутник',
+    icon: desoloIcon,
+    image: 'assets/images/desolo.png',
+    description: 'Бесплодная, безатмосферная планета, спутник Сильвы.',
+    mainResourse: [wolframite, sphalerite],
+    secondaryResourse: [
+      quartz,
+      clay,
+      ammonium,
+      laterite,
+      graphite,
+      compound,
+      resin,
+      astronium,
+    ],
+    gases: [nothing],
+    difficulty: 'Легкая',
+    scale: 'Малая',
+    dayLength: '1 мин 55 сек',
+    sun: 'Отлично',
+    wind: 'Плохо',
+    powerRequired: '8U/s',
+    gatewayImage: 'assets/images/gateway_desolo.png',
+    gatewayResouce: zinc,
+  ),
+  Planet(
+    name: 'Калидор',
+    type: 'Засушливый',
+    icon: calidorIcon,
+    image: 'assets/images/cal.png',
+    description: 'Пустынная планета с большим количеством солнечной энергии.',
+    mainResourse: [wolframite, malachite],
+    secondaryResourse: [
+      laterite,
+      ammonium,
+      compound,
+      graphite,
+      resin,
+      quartz,
+      clay,
+      astronium,
+    ],
+    gases: [hydrogen, sulfur],
+    difficulty: 'Средняя',
+    scale: 'Средний',
+    dayLength: '8 мин',
+    sun: 'Отлично',
+    wind: 'Плохо',
+    powerRequired: '12U/s',
+    gatewayImage: 'assets/images/gateway_calidor.png',
+    gatewayResouce: explosivePowder,
+  ),
+  Planet(
+    name: 'Везания',
+    type: 'Экзотическая',
+    icon: vesaniaIcon,
+    image: 'assets/images/vesania.png',
+    description:
+        'Одна из самых ярких планет, густая и пышная атмосфера, разнообразная и необычная местность.',
+    mainResourse: [lithium, titanite],
+    secondaryResourse: [
+      graphite,
+      laterite,
+      clay,
+      quartz,
+      compound,
+      resin,
+      astronium,
+    ],
+    gases: [hydrogen, argone, nitrogen],
+    difficulty: 'Средняя',
+    scale: 'Средняя',
+    dayLength: '13 мин 30 сек',
+    sun: 'Плохо',
+    wind: 'Отлично',
+    powerRequired: '16U/s',
+    gatewayImage: 'assets/images/gateway_vesania.png',
+    gatewayResouce: graphene,
+  ),
+  Planet(
+    name: 'Новус',
+    type: 'Экзотический спутник',
+    icon: novusIcon,
+    image: 'assets/images/novus.png',
+    description:
+        'Также одна из самых ярких планет в Astroneer, с её тонкой туманной атмосферой и пурпурной, покрытой лесами и кратерами местностью.',
+    mainResourse: [lithium, hematite, laterite],
+    secondaryResourse: [
+      compound,
+      quartz,
+      resin,
+      graphite,
+      ammonium,
+      clay,
+      astronium,
+    ],
+    gases: [metane, hydrogen],
+    difficulty: 'Средняя',
+    scale: 'Маленький',
+    dayLength: '3 мин 30 сек',
+    sun: 'Крайне отлично',
+    wind: 'Хорошо',
+    powerRequired: '22U/s',
+    gatewayImage: 'assets/images/gateway_novus.png',
+    gatewayResouce: silicone,
+  ),
+  Planet(
+    name: 'Гласио',
+    type: 'Тундровая',
+    icon: glacioIcon,
+    image: 'assets/images/glacio.png',
+    description:
+        'Планета с тонкой атмосферой, сильными ветрами и ледяныим горами',
+    mainResourse: [titanite, hematite],
+    secondaryResourse: [
+      laterite,
+      graphite,
+      quartz,
+      ammonium,
+      compound,
+      resin,
+      astronium,
+    ],
+    gases: [argone],
+    difficulty: 'Высокая',
+    scale: 'Средняя',
+    dayLength: '20 мин',
+    sun: 'Плохо',
+    wind: 'Отлично',
+    powerRequired: '26U/s',
+    gatewayImage: 'assets/images/gateway_glasio.png',
+    gatewayResouce: diamond,
+  ),
+  Planet(
+    name: 'Атрокс',
+    type: 'Радиоактивная',
+    icon: atroxIcon,
+    image: 'assets/images/atrox.png',
+    description:
+        'Планета с ядовитой атмосферой, а за коварными кратерами скрывается очень агрессивная флора.',
+    mainResourse: [nothing],
+    secondaryResourse: [
+      graphite,
+      laterite,
+      quartz,
+      compound,
+      resin,
+      ammonium,
+      clay,
+      astronium,
+    ],
+    gases: [metane, nitrogen, sulfur, helium],
+    difficulty: 'Крайне высокая',
+    scale: 'Средний',
+    dayLength: '20 мин',
+    sun: 'Плохо',
+    wind: 'Очень плохо',
+    powerRequired: '30U/s',
+    gatewayImage: 'assets/images/gateway_calidor.png',
+    gatewayResouce: hydrogen,
+  ),
+  Planet(
+    name: 'Эолуз',
+    type: 'Глючная',
+    icon: aeoluzIcon,
+    image: 'assets/images/aeoluz.png',
+    description:
+        'Смесь оригинальных планет, но со Штормами, новыми типами пещер, подземными регионами и новым ядром',
+    mainResourse: [
+      ammonium,
+      clay,
+      compound,
+      graphite,
+      hematite,
+      laterite,
+      lithium,
+      malachite,
+      organic,
+      quartz,
+      resin,
+      sphalerite,
+      titanite,
+      wolframite,
+      astronium,
+    ],
+    secondaryResourse: [nothing],
+    gases: [argone, helium, hydrogen, metane, nitrogen, sulfur],
+    difficulty: 'Средняя',
+    scale: 'Очень большая',
+    dayLength: '9 мин',
+    sun: 'Ниже среднего',
+    wind: 'Средне',
+    powerRequired: 'Не имеет привычного ядра, и врат',
+    gatewayImage: 'assets/icons/nothing.png',
+    gatewayResouce: nothing,
+  ),
+];
 
 class SpecialLocation {
-  final String name;              
-  final String image;             
-  final String description;       
-  final String howToFind;         
-  final String function;          
+  final String name;
+  final String image;
+  final String icon;
+  final String description;
+  final String howToFind;
+  final String function;
   final List<String> requirements;
-  final String? loreNote;         
+  final String? loreNote;
 
   SpecialLocation({
     required this.name,
     required this.image,
+    required this.icon,
     required this.description,
     required this.howToFind,
     required this.function,
@@ -209,9 +292,12 @@ class SpecialLocation {
 final List<SpecialLocation> specialLocations = [
   SpecialLocation(
     name: 'Неопознанный спутник',
+    icon: unknownSputnikIcon,
     image: 'assets/images/unknown_sputnik.png',
-    description: 'Древняя структура, расположенная в орбите. Используется для завершения игры.',
-    howToFind: 'Находится в космосе. Попасть можно через ядро любой активированной планеты.',
+    description:
+        'Древняя структура, расположенная в орбите. Используется для завершения игры.',
+    howToFind:
+        'Находится в космосе. Попасть можно через ядро любой активированной планеты.',
     function: 'Финальная активация. Завершает сюжет.',
     requirements: [
       'Активировать ядра всех планет',
@@ -221,14 +307,16 @@ final List<SpecialLocation> specialLocations = [
   ),
   SpecialLocation(
     name: 'Солнечная комната',
+    icon: sunRoomIcon,
     image: 'assets/images/sun_room.png',
-    description: 'Загадочная структура с мощным светом. Часто упоминается в лоре.',
-    howToFind: 'Может быть обнаружена через телепорты ядра. Доступна после активации всех планет.',
+    description:
+        'Загадочная структура с мощным светом. Часто упоминается в лоре.',
+    howToFind:
+        'Может быть обнаружена через телепорты ядра. Доступна после активации всех планет.',
     function: 'Открывает финальные элементы сюжета. Возможно, арена или храм.',
-    requirements: [
-      'Завершить активацию всех платформ планет',
-    ],
-    loreNote: 'Некоторые теории связывают её с исчезновением древней цивилизации.',
+    requirements: ['Завершить активацию всех платформ планет'],
+    loreNote:
+        'Некоторые теории связывают её с исчезновением древней цивилизации.',
   ),
 ];
 
@@ -237,9 +325,9 @@ class Resource {
   final String icon;
   final String image;
   final String description;
-  final String obtainedFrom; // Где или как получить
-  final List<String> usedIn; // Названия объектов, где используется
-  final String category; // Природный / Переплавленный / Сложный / Газ и т.д.
+  final List<Widget> obtainedFrom;
+  final List<Widget> usedIn;
+  final String category;
 
   Resource({
     required this.name,
@@ -258,68 +346,131 @@ final List<Resource> exampleResources = [
     icon: compoundIcon,
     image: compoundIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Можно найти на поверхности следующих планет:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text('На всех планетах в изобилии'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [copper]),
+    ],
     category: 'Природный',
   ),
-  
+
   Resource(
     name: 'Смола',
     icon: resinIcon,
     image: resinIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Можно найти на поверхности следующих планет:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text('На всех планетах в изобилии'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [copper]),
+    ],
     category: 'Природный',
   ),
-  
+
   Resource(
     name: 'Глина',
     icon: clayIcon,
     image: clayIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Можно найти на поверхности следующих планет:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text('На всех планетах в изобилии'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [copper]),
+    ],
     category: 'Природный',
   ),
-  
+
   Resource(
     name: 'Графит',
     icon: graphiteIcon,
     image: graphiteIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Можно найти на поверхности следующих планет:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text('На всех планетах в изобилии'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [copper]),
+    ],
     category: 'Природный',
   ),
-  
+
   Resource(
     name: 'Латерит',
     icon: lateriteIcon,
     image: lateriteIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Можно найти на поверхности следующих планет:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text('На всех планетах в изобилии'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [copper]),
+    ],
     category: 'Природный',
   ),
-  
+
   Resource(
     name: 'Гематит',
     icon: hematiteIcon,
     image: hematiteIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Можно найти на поверхности следующих планет:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text('На всех планетах в изобилии'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [copper]),
+    ],
     category: 'Природный',
   ),
-  
+
   Resource(
     name: 'Литий',
     icon: lithiumIcon,
     image: lithiumIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Можно найти на поверхности следующих планет:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text('На всех планетах в изобилии'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [copper]),
+    ],
     category: 'Природный',
   ),
 
@@ -328,88 +479,172 @@ final List<Resource> exampleResources = [
     icon: malachiteIcon,
     image: malachiteIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Можно найти на поверхности следующих планет:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text('На всех планетах в изобилии'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [copper]),
+    ],
     category: 'Природный',
   ),
-    
+
   Resource(
     name: 'Органика',
     icon: organicIcon,
     image: organicIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Можно найти на поверхности следующих планет:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text('На всех планетах в изобилии'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [copper]),
+    ],
     category: 'Природный',
   ),
-  
+
   Resource(
     name: 'Кварц',
     icon: quartzIcon,
     image: quartzIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Можно найти на поверхности следующих планет:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text('На всех планетах в изобилии'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [copper]),
+    ],
     category: 'Природный',
   ),
-  
+
   Resource(
     name: 'Сфалерит',
     icon: sphaleriteIcon,
     image: sphaleriteIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Можно найти на поверхности следующих планет:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text('На всех планетах в изобилии'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [copper]),
+    ],
     category: 'Природный',
   ),
-  
+
   Resource(
     name: 'Титанит',
     icon: titaniteIcon,
     image: titaniteIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Можно найти на поверхности следующих планет:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text('На всех планетах в изобилии'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [copper]),
+    ],
     category: 'Природный',
   ),
-  
+
   Resource(
     name: 'Вольфрамит',
     icon: wolframiteIcon,
     image: wolframiteIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Можно найти на поверхности следующих планет:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text('На всех планетах в изобилии'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [copper]),
+    ],
     category: 'Природный',
   ),
-  
+
   Resource(
     name: 'Аммоний',
     icon: ammoniumIcon,
     image: ammoniumIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Можно найти на поверхности следующих планет:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text('На всех планетах в изобилии'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [copper]),
+    ],
     category: 'Природный',
   ),
-  
+
   Resource(
     name: 'Астрониум',
     icon: astroniumIcon,
     image: astroniumIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Можно найти на поверхности следующих планет:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text('На всех планетах в изобилии'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [copper]),
+    ],
     category: 'Природный',
   ),
-  
+
   Resource(
     name: 'Аргон',
     icon: argoneIcon,
     image: argoneIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Собирается с помощью атмосферного конденсатора на следующих планетах:',
+      ),
+      const SizedBox(height: 8),
+      bulletWithIcon('assets/icons/novusI.png', 'Новус — высокое содержание'),
+      bulletWithIcon(
+        'assets/icons/vesaniaI.png',
+        'Весания — умеренное содержание',
+      ),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [astronium]),
+    ],
     category: 'Газ',
   ),
 
@@ -418,8 +653,20 @@ final List<Resource> exampleResources = [
     icon: metaneIcon,
     image: metaneIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Собирается с помощью атмосферного конденсатора на следующих планетах:',
+      ),
+      const SizedBox(height: 8),
+      bulletWithIcon('assets/icons/novusI.png', 'Новус — высокое содержание'),
+      bulletWithIcon(
+        'assets/icons/vesaniaI.png',
+        'Весания — умеренное содержание',
+      ),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [astronium]),
+    ],
     category: 'Газ',
   ),
 
@@ -428,28 +675,63 @@ final List<Resource> exampleResources = [
     icon: hydrogenIcon,
     image: hydrogenIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Собирается с помощью атмосферного конденсатора на следующих планетах:',
+      ),
+      const SizedBox(height: 8),
+      bulletWithIcon('assets/icons/novusI.png', 'Новус — высокое содержание'),
+      bulletWithIcon(
+        'assets/icons/vesaniaI.png',
+        'Весания — умеренное содержание',
+      ),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [astronium]),
+    ],
     category: 'Газ',
   ),
-
   Resource(
     name: 'Азот',
     icon: nitrogenIcon,
     image: nitrogenIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Собирается с помощью атмосферного конденсатора на следующих планетах:',
+      ),
+      const SizedBox(height: 8),
+      bulletWithIcon('assets/icons/novusI.png', 'Новус — высокое содержание'),
+      bulletWithIcon(
+        'assets/icons/vesaniaI.png',
+        'Весания — умеренное содержание',
+      ),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [astronium]),
+    ],
     category: 'Газ',
   ),
-  
+
   Resource(
     name: 'Гелий',
     icon: heliumIcon,
     image: heliumIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Собирается с помощью атмосферного конденсатора на следующих планетах:',
+      ),
+      const SizedBox(height: 8),
+      bulletWithIcon('assets/icons/novusI.png', 'Новус — высокое содержание'),
+      bulletWithIcon(
+        'assets/icons/vesaniaI.png',
+        'Весания — умеренное содержание',
+      ),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [astronium]),
+    ],
     category: 'Газ',
   ),
 
@@ -458,18 +740,55 @@ final List<Resource> exampleResources = [
     icon: sulfurIcon,
     image: sulfurIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Собирается с помощью атмосферного конденсатора на следующих планетах:',
+      ),
+      const SizedBox(height: 8),
+      bulletWithIcon('assets/icons/novusI.png', 'Новус — высокое содержание'),
+      bulletWithIcon(
+        'assets/icons/vesaniaI.png',
+        'Весания — умеренное содержание',
+      ),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [astronium]),
+    ],
     category: 'Газ',
   ),
-  
+
   Resource(
     name: 'Керамика',
     icon: ceramicsIcon,
     image: ceramicsIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Получается путём переплавки сфалерита в плавильне.',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Row(
+        children: [
+          Image.asset('assets/icons/sphalerite.png', width: 32, height: 32),
+          const SizedBox(width: 8),
+          const Text('1 × Сфалерит → 1 × Цинк'),
+        ],
+      ),
+      const SizedBox(height: 12),
+      Text(
+        'Где найти сфалерит:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      bulletWithIcon(
+        'assets/icons/desoloI.png',
+        'Десоло — на поверхности и в пещерах (в изобилии)',
+      ),
+      bulletWithIcon('assets/icons/calI.png', 'Калидор — в пещерах'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [astronium]),
+    ],
     category: 'Очищенный',
   ),
 
@@ -478,8 +797,33 @@ final List<Resource> exampleResources = [
     icon: carbonIcon,
     image: carbonIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Получается путём переплавки сфалерита в плавильне.',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Row(
+        children: [
+          Image.asset('assets/icons/sphalerite.png', width: 32, height: 32),
+          const SizedBox(width: 8),
+          const Text('1 × Сфалерит → 1 × Цинк'),
+        ],
+      ),
+      const SizedBox(height: 12),
+      Text(
+        'Где найти сфалерит:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      bulletWithIcon(
+        'assets/icons/desoloI.png',
+        'Десоло — на поверхности и в пещерах (в изобилии)',
+      ),
+      bulletWithIcon('assets/icons/calI.png', 'Калидор — в пещерах'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [astronium]),
+    ],
     category: 'Очищенный',
   ),
 
@@ -488,8 +832,33 @@ final List<Resource> exampleResources = [
     icon: copperIcon,
     image: copperIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Получается путём переплавки сфалерита в плавильне.',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Row(
+        children: [
+          Image.asset('assets/icons/sphalerite.png', width: 32, height: 32),
+          const SizedBox(width: 8),
+          const Text('1 × Сфалерит → 1 × Цинк'),
+        ],
+      ),
+      const SizedBox(height: 12),
+      Text(
+        'Где найти сфалерит:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      bulletWithIcon(
+        'assets/icons/desoloI.png',
+        'Десоло — на поверхности и в пещерах (в изобилии)',
+      ),
+      bulletWithIcon('assets/icons/calI.png', 'Калидор — в пещерах'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [astronium]),
+    ],
     category: 'Очищенный',
   ),
 
@@ -498,8 +867,33 @@ final List<Resource> exampleResources = [
     icon: glassIcon,
     image: glassIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Получается путём переплавки сфалерита в плавильне.',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Row(
+        children: [
+          Image.asset('assets/icons/sphalerite.png', width: 32, height: 32),
+          const SizedBox(width: 8),
+          const Text('1 × Сфалерит → 1 × Цинк'),
+        ],
+      ),
+      const SizedBox(height: 12),
+      Text(
+        'Где найти сфалерит:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      bulletWithIcon(
+        'assets/icons/desoloI.png',
+        'Десоло — на поверхности и в пещерах (в изобилии)',
+      ),
+      bulletWithIcon('assets/icons/calI.png', 'Калидор — в пещерах'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [astronium]),
+    ],
     category: 'Очищенный',
   ),
 
@@ -508,8 +902,37 @@ final List<Resource> exampleResources = [
     icon: ironIcon,
     image: ironIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Получается путём переплавки сфалерита в плавильне.',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Row(
+        children: [
+          Image.asset(sphaleriteIcon, width: 32,),
+          SizedBox(width: 8,),
+          Text('Сфалерит'),
+          Icon(Icons.arrow_right, color: Colors.white,),
+          Image.asset(zincIcon, width: 32,),
+          SizedBox(width: 8,),
+          Text('Цинк'),
+        ],
+      ),
+      const SizedBox(height: 12),
+      Text(
+        'Где найти сфалерит:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      bulletWithIcon(
+        'assets/icons/desoloI.png',
+        'Десоло — на поверхности и в пещерах (в изобилии)',
+      ),
+      bulletWithIcon('assets/icons/calI.png', 'Калидор — в пещерах'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [astronium]),
+    ],
     category: 'Очищенный',
   ),
 
@@ -518,8 +941,33 @@ final List<Resource> exampleResources = [
     icon: titaniumIcon,
     image: titaniumIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Получается путём переплавки сфалерита в плавильне.',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Row(
+        children: [
+          Image.asset('assets/icons/sphalerite.png', width: 32, height: 32),
+          const SizedBox(width: 8),
+          const Text('1 × Сфалерит → 1 × Цинк'),
+        ],
+      ),
+      const SizedBox(height: 12),
+      Text(
+        'Где найти сфалерит:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      bulletWithIcon(
+        'assets/icons/desoloI.png',
+        'Десоло — на поверхности и в пещерах (в изобилии)',
+      ),
+      bulletWithIcon('assets/icons/calI.png', 'Калидор — в пещерах'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [astronium]),
+    ],
     category: 'Очищенный',
   ),
 
@@ -528,8 +976,33 @@ final List<Resource> exampleResources = [
     icon: tungstenIcon,
     image: tungstenIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Получается путём переплавки сфалерита в плавильне.',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Row(
+        children: [
+          Image.asset('assets/icons/sphalerite.png', width: 32, height: 32),
+          const SizedBox(width: 8),
+          const Text('1 × Сфалерит → 1 × Цинк'),
+        ],
+      ),
+      const SizedBox(height: 12),
+      Text(
+        'Где найти сфалерит:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      bulletWithIcon(
+        'assets/icons/desoloI.png',
+        'Десоло — на поверхности и в пещерах (в изобилии)',
+      ),
+      bulletWithIcon('assets/icons/calI.png', 'Калидор — в пещерах'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [astronium]),
+    ],
     category: 'Очищенный',
   ),
 
@@ -538,8 +1011,33 @@ final List<Resource> exampleResources = [
     icon: zincIcon,
     image: zincIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Получается путём переплавки сфалерита в плавильне.',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Row(
+        children: [
+          Image.asset('assets/icons/sphalerite.png', width: 32, height: 32),
+          const SizedBox(width: 8),
+          const Text('1 × Сфалерит → 1 × Цинк'),
+        ],
+      ),
+      const SizedBox(height: 12),
+      Text(
+        'Где найти сфалерит:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      bulletWithIcon(
+        'assets/icons/desoloI.png',
+        'Десоло — на поверхности и в пещерах (в изобилии)',
+      ),
+      bulletWithIcon('assets/icons/calI.png', 'Калидор — в пещерах'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [astronium]),
+    ],
     category: 'Очищенный',
   ),
 
@@ -548,8 +1046,17 @@ final List<Resource> exampleResources = [
     icon: aluminiumAlloyIcon,
     image: aluminiumAlloyIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Создаётся в Химической лаборатории из:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [tungstenCarbide]),
+    ],
     category: 'Сложный',
   ),
 
@@ -558,8 +1065,17 @@ final List<Resource> exampleResources = [
     icon: diamondIcon,
     image: diamondIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Создаётся в Химической лаборатории из:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [tungstenCarbide]),
+    ],
     category: 'Сложный',
   ),
 
@@ -568,8 +1084,17 @@ final List<Resource> exampleResources = [
     icon: explosivePowderIcon,
     image: explosivePowderIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Создаётся в Химической лаборатории из:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [tungstenCarbide]),
+    ],
     category: 'Сложный',
   ),
 
@@ -578,8 +1103,17 @@ final List<Resource> exampleResources = [
     icon: grapheneIcon,
     image: grapheneIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Создаётся в Химической лаборатории из:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [tungstenCarbide]),
+    ],
     category: 'Сложный',
   ),
 
@@ -588,8 +1122,17 @@ final List<Resource> exampleResources = [
     icon: hydrazineIcon,
     image: hydrazineIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Создаётся в Химической лаборатории из:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [tungstenCarbide]),
+    ],
     category: 'Сложный',
   ),
 
@@ -598,8 +1141,17 @@ final List<Resource> exampleResources = [
     icon: nanocarbonAlloyIcon,
     image: nanocarbonAlloyIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Создаётся в Химической лаборатории из:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [tungstenCarbide]),
+    ],
     category: 'Сложный',
   ),
 
@@ -608,8 +1160,17 @@ final List<Resource> exampleResources = [
     icon: plasticIcon,
     image: plasticIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Создаётся в Химической лаборатории из:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [tungstenCarbide]),
+    ],
     category: 'Сложный',
   ),
 
@@ -618,8 +1179,17 @@ final List<Resource> exampleResources = [
     icon: rubberIcon,
     image: rubberIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Создаётся в Химической лаборатории из:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [tungstenCarbide]),
+    ],
     category: 'Сложный',
   ),
 
@@ -628,8 +1198,17 @@ final List<Resource> exampleResources = [
     icon: siliconeIcon,
     image: siliconeIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Создаётся в Химической лаборатории из:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [tungstenCarbide]),
+    ],
     category: 'Сложный',
   ),
 
@@ -638,8 +1217,17 @@ final List<Resource> exampleResources = [
     icon: steelIcon,
     image: steelIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Создаётся в Химической лаборатории из:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [tungstenCarbide]),
+    ],
     category: 'Сложный',
   ),
 
@@ -648,8 +1236,17 @@ final List<Resource> exampleResources = [
     icon: titaniumAlloyIcon,
     image: titaniumAlloyIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Создаётся в Химической лаборатории из:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [tungstenCarbide]),
+    ],
     category: 'Сложный',
   ),
 
@@ -658,8 +1255,17 @@ final List<Resource> exampleResources = [
     icon: tungstenCarbideIcon,
     image: tungstenCarbideIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Создаётся в Химической лаборатории из:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [tungstenCarbide]),
+    ],
     category: 'Сложный',
   ),
 
@@ -668,8 +1274,18 @@ final List<Resource> exampleResources = [
     icon: soilIcon,
     image: soilIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Доступен следующими способами:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      Text('Взрыв повреждённых контейнеров с помощью динамита'),
+      Text('Покупка за байты в некоторых событиях EXO'),
+      Text('В редких случаях — награда за задания'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [aluminiumAlloy]),
+    ],
     category: 'Природный',
   ),
 
@@ -678,8 +1294,18 @@ final List<Resource> exampleResources = [
     icon: exoChipIcon,
     image: exoChipIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Доступен следующими способами:',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      Text('Взрыв повреждённых контейнеров с помощью динамита'),
+      Text('Покупка за байты в некоторых событиях EXO'),
+      Text('В редких случаях — награда за задания'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [aluminiumAlloy]),
+    ],
     category: 'ыВВ',
   ),
 
@@ -688,8 +1314,20 @@ final List<Resource> exampleResources = [
     icon: scrapIcon,
     image: scrapIcon,
     description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: 'Планеты: Сильва, Калидор',
-    usedIn: ['Плавильная печь', 'Средний генератор'],
+    obtainedFrom: [
+      Text(
+        'Получается путём переработки мусора и сломанных предметов в Шредере.',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text('Подбирай сломанное оборудование, найденное в мире'),
+      Text('Перерабатывай его в любом шредере'),
+      const SizedBox(height: 12),
+      Text('Обменивается на ресурсы через торговую платформу.'),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [nanocarbonAlloy]),
+    ],
     category: 'СложыВВВЫный',
   ),
 ];
@@ -709,6 +1347,9 @@ final String novusIcon = 'assets/icons/novusI.png';
 final String atroxIcon = 'assets/icons/atroxI.png';
 final String glacioIcon = 'assets/icons/glasioI.png';
 final String aeoluzIcon = 'assets/icons/aeoluzI.png';
+final String unknownSputnikIcon = 'assets/icons/unknown_sputnikI.png';
+final String sunRoomIcon = 'assets/icons/sun_roomI.png';
+
 final String nothingIcon = 'assets/icons/nothing.png';
 
 final String compoundIcon = 'assets/icons/compound.png';
@@ -888,17 +1529,13 @@ class CraftableModule {
 
 final List<CraftableModule> modules = [
   CraftableModule(
-  name: "Штука",
-  description: "Чета делает",
-  image: "assets/images/vesania.png",
-  icon: "assets/images/vesania.png",
-  bytesCost: '500',
-  ingredients: [
-    malachite,
-    malachite,
-    astronium,
-  ],
-  printerLevel: "Большой",
-  category: "Хз",
+    name: "Штука",
+    description: "Чета делает",
+    image: "assets/images/vesania.png",
+    icon: "assets/images/vesania.png",
+    bytesCost: '500',
+    ingredients: [malachite, malachite, astronium],
+    printerLevel: "Большой",
+    category: "Хз",
   ),
 ];

@@ -159,7 +159,7 @@ class PlanetDetailPage extends StatelessWidget {
 
                       SizedBox(height: 16),
                       Text(
-                        "Иконка ядра",
+                        "Символ ядра",
                         style: TextStyle(color: Colors.white),
                       ),
                       SizedBox(height: 16),

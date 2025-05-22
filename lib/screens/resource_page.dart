@@ -50,10 +50,7 @@ class ResourceDetailPage extends StatelessWidget {
             RequirementTab(
               title: 'ПОЛУЧЕНИЕ',
               children: [
-                Text(
-                  resource.obtainedFrom,
-                  style: TextStyle(color: Colors.white, fontSize: 14),
-                ),
+                ...resource.obtainedFrom,
               ],
             ),
 
@@ -61,18 +58,10 @@ class ResourceDetailPage extends StatelessWidget {
 
             RequirementTab(
               title: 'Используется в',
-              children:
-                  resource.usedIn
-                      .map(
-                        (req) => Padding(
-                          padding: const EdgeInsets.only(bottom: 6),
-                          child: Text(
-                            '- $req',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        ),
-                      )
-                      .toList(),
+              children: [
+                SizedBox(height: 8,),
+                ...resource.usedIn
+              ]
             ),
             const SizedBox(height: 16),
           ],

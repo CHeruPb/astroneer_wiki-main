@@ -74,16 +74,13 @@ class LocationsScreen extends StatelessWidget {
                     child: Stack(
                       children: [
                         Center(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(12),
-                            child: SizedBox(
-                              height: 150,
-                              width: 150,
-                              child: Image.asset(
-                                planet.icon,
-                                width: 100,
-                                height: 100,
-                              ),
+                          child: SizedBox(
+                            height: 128,
+                            width: 128,
+                            child: Image.asset(
+                              planet.icon,
+                              width: 100,
+                              height: 100,
                             ),
                           ),
                         ),
@@ -153,16 +150,10 @@ class LocationsScreen extends StatelessWidget {
                     child: Stack(
                       children: [
                         Center(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(12),
-                            child: SizedBox(
-                              height: 150,
-                              width: 150,
-                              child: Image.asset(
-                                location.image,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
+                          child: SizedBox(
+                            height: 128,
+                            width: 128,
+                            child: Image.asset(location.icon),
                           ),
                         ),
                         Align(
