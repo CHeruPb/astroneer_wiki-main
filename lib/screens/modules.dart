@@ -78,11 +78,11 @@ class _GameItemsScreenState extends State<GameItemsScreen> {
                 children: [
                   Center(
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(32),
                       child: SizedBox(
                         height: 120,
                         width: 120,
-                        child: Image.asset(item.image, fit: BoxFit.cover),
+                        child: Image.asset(item.icon, fit: BoxFit.cover),
                       ),
                     ),
                   ),

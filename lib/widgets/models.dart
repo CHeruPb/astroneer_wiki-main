@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:project/widgets/bullets.dart';
 import 'package:project/widgets/ingredients_list.dart';
@@ -1452,6 +1454,7 @@ final List<Ingredient> allIngredients = [
   Ingredient(iconPath: soilIcon, name: 'Почва'),
   Ingredient(iconPath: exoChipIcon, name: 'EXO чип'),
   Ingredient(iconPath: scrapIcon, name: 'Лом'),
+  Ingredient(iconPath: canisterIcon, name: 'Заполненный маленький контейнер'),
 ];
 
 final Ingredient nothing = allIngredients[21];
@@ -1504,6 +1507,7 @@ final Ingredient tungstenCarbide = allIngredients[41];
 final Ingredient soil = allIngredients[42];
 final Ingredient exoChip = allIngredients[43];
 final Ingredient scrap = allIngredients[44];
+final Ingredient fullSmallContainer = allIngredients[45];
 
 class CraftableModule {
   final String name;
@@ -1527,15 +1531,434 @@ class CraftableModule {
   });
 }
 
+final String augmentIcon = 'assets/icons/augmentI.png';
+final String autoextractorIcon = 'assets/icons/autoextractorI.png';
+final String batteryIcon = 'assets/icons/batteryI.png';
+final String beaconIcon = 'assets/icons/beaconI.png';
+final String cameraIcon = 'assets/icons/cameraI.png';
+final String canisterIcon = 'assets/icons/canisterI.png';
+final String chemistryIcon = 'assets/icons/chemistry_labI.png';
+final String condenserIcon = 'assets/icons/condenserI.png';
+final String craneIcon = 'assets/icons/craneI.png';
+final String drillIcon = 'assets/icons/drillI.png';
+final String dynamiteIcon = 'assets/icons/dynamiteI.png';
+final String powerIcon = 'assets/icons/ebaninaI.png';
+final String engineI = 'assets/icons/engineI.png';
+final String extendersIcon = 'assets/icons/extendersI.png';
+final String figurineIcon = 'assets/icons/figurineI.png';
+final String generatorIcon = 'assets/icons/generatorI.png';
+final String hornIcon = 'assets/icons/hornI.png';
+final String hoverboardIcon = 'assets/icons/hoverboardI.png';
+final String landingIcon = 'assets/icons/landingI.png';
+final String largeIcon = 'assets/icons/largeI.png';
+final String levelingBlockIcon = 'assets/icons/leveling_blockI.png';
+final String mediumIcon = 'assets/icons/mediumI.png';
+final String oxygenatorIcon = 'assets/icons/oxygenatorI.png';
+final String oxygenIcon = 'assets/icons/oxygenI.png';
+final String packagerIcon = 'assets/icons/packagerI.png';
+final String paverIcon = 'assets/icons/paverI.png';
+final String platformIcon = 'assets/icons/platformI.png';
+final String researchSampleIcon = 'assets/icons/research_sampleI.png';
+final String researchIcon = 'assets/icons/researchI.png';
+final String roverIcon = 'assets/icons/roverI.png';
+final String scannerIcon = 'assets/icons/scannerI.png';
+final String seatIcon = 'assets/icons/seatI.png';
+final String sensorIcon = 'assets/icons/sensorI.png';
+final String sharikIcon = 'assets/icons/sharikI.png';
+final String shelterIcon = 'assets/icons/shelterI.png';
+final String shredderIcon = 'assets/icons/shredderI.png';
+final String smallIcon = 'assets/icons/smallI.png';
+final String smeltingIcon = 'assets/icons/smelting_furnaceI.png';
+final String soilCentrifugeIcon = 'assets/icons/soil_centrifugeI.png';
+final String solarPanelIcon = 'assets/icons/solar_panelI.png';
+final String splitterIcon = 'assets/icons/splitterI.png';
+final String storageIcon = 'assets/icons/storageI.png';
+final String tetherIcon = 'assets/icons/tetherI.png';
+final String tradeIcon = 'assets/icons/tradeI.png';
+final String vtolIcon = 'assets/icons/vtolI.png';
+final String winchIcon = 'assets/icons/winchI.png';
+final String windTurbineIcon = 'assets/icons/wind_turbineI.png';
+final String workLightIcon = 'assets/icons/work_lightI.png';
+
 final List<CraftableModule> modules = [
   CraftableModule(
-    name: "Штука",
+    name: "Маленький принтер",
     description: "Чета делает",
-    image: "assets/images/vesania.png",
-    icon: "assets/images/vesania.png",
+    image: smallIcon,
+    icon: smallIcon,
+    byteCost: 'Разблокировано',
+    ingredients: [compound],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Упаковщик",
+    description: "Чета делает",
+    image: packagerIcon,
+    icon: packagerIcon,
+    byteCost: '1 000',
+    ingredients: [graphite],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Блок выравнивания",
+    description: "Чета делает",
+    image: levelingBlockIcon,
+    icon: levelingBlockIcon,
     byteCost: '500',
-    ingredients: [malachite, malachite, astronium],
-    printerLevel: "Большой",
+    ingredients: [fullSmallContainer],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Опоры",
+    description: "Чета делает",
+    image: tetherIcon,
+    icon: tetherIcon,
+    byteCost: 'Разблокировано',
+    ingredients: [compound],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Кислородые фильтры",
+    description: "Чета делает",
+    image: oxygenIcon,
+    icon: oxygenIcon,
+    byteCost: 'Разблокировано',
+    ingredients: [resin],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Кислородный бак",
+    description: "Чета делает",
+    image: oxygenIcon,
+    icon: oxygenIcon,
+    byteCost: '2 000',
+    ingredients: [glass],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Порт. ген. кислорода",
+    description: "Чета делает",
+    image: oxygenatorIcon,
+    icon: oxygenatorIcon,
+    byteCost: '10 000',
+    ingredients: [nanocarbonAlloy],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Маленький контейнер",
+    description: "Чета делает",
+    image: canisterIcon,
+    icon: canisterIcon,
+    byteCost: 'Разблокировано',
+    ingredients: [resin],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Маячок",
+    description: "Чета делает",
+    image: beaconIcon,
+    icon: beaconIcon,
+    byteCost: 'Разблокировано',
+    ingredients: [quartz],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Рабочий фонарь",
+    description: "Чета делает",
+    image: workLightIcon,
+    icon: workLightIcon,
+    byteCost: 'Разблокировано',
+    ingredients: [copper],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Сигнальные огни",
+    description: "Чета делает",
+    image: workLightIcon,
+    icon: workLightIcon,
+    byteCost: '350',
+    ingredients: [organic],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Прожектор",
+    description: "Чета делает",
+    image: workLightIcon,
+    icon: workLightIcon,
+    byteCost: '2 000',
+    ingredients: [tungsten],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Малый генератор",
+    description: "Чета делает",
+    image: generatorIcon,
+    icon: generatorIcon,
+    byteCost: 'Разблокировано',
+    ingredients: [compound],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Силовые ячейки",
+    description: "Чета делает",
+    image: powerIcon,
+    icon: powerIcon,
+    byteCost: 'Разблокировано',
+    ingredients: [compound],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Малая солнечн. панель",
+    description: "Чета делает",
+    image: solarPanelIcon,
+    icon: solarPanelIcon,
+    byteCost: '800',
+    ingredients: [copper],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Малая ветротурбина",
+    description: "Чета делает",
+    image: solarPanelIcon,
+    icon: solarPanelIcon,
+    byteCost: '800',
+    ingredients: [copper],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Малая батарея",
+    description: "Чета делает",
+    image: batteryIcon,
+    icon: batteryIcon,
+    byteCost: '2 000',
+    ingredients: [zinc],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Модиф. ускорения",
+    description: "Чета делает",
+    image: augmentIcon,
+    icon: augmentIcon,
+    byteCost: '1 000',
+    ingredients: [zinc],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Мод. больш. участков",
+    description: "Чета делает",
+    image: augmentIcon,
+    icon: augmentIcon,
+    byteCost: '1 000',
+    ingredients: [zinc],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Модиф. мал. участков",
+    description: "Чета делает",
+    image: augmentIcon,
+    icon: augmentIcon,
+    byteCost: '1 000',
+    ingredients: [zinc],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Ингибитор",
+    description: "Чета делает",
+    image: augmentIcon,
+    icon: augmentIcon,
+    byteCost: '1 000',
+    ingredients: [zinc],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Модиф. выравнивания",
+    description: "Чета делает",
+    image: augmentIcon,
+    icon: augmentIcon,
+    byteCost: '1 000',
+    ingredients: [zinc],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Модиф. бура 1",
+    description: "Чета делает",
+    image: augmentIcon,
+    icon: augmentIcon,
+    byteCost: '1 000',
+    ingredients: [ceramics],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Модиф. бура 2",
+    description: "Чета делает",
+    image: augmentIcon,
+    icon: augmentIcon,
+    byteCost: '2 500',
+    ingredients: [tungstenCarbide],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Модиф. бура 3",
+    description: "Чета делает",
+    image: augmentIcon,
+    icon: augmentIcon,
+    byteCost: '3 750',
+    ingredients: [diamond],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Динамит",
+    description: "Чета делает",
+    image: dynamiteIcon,
+    icon: dynamiteIcon,
+    byteCost: '3 750',
+    ingredients: [explosivePowder],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Фейерверки",
+    description: "Чета делает",
+    image: dynamiteIcon,
+    icon: dynamiteIcon,
+    byteCost: '3 750',
+    ingredients: [explosivePowder],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Малая камера",
+    description: "Чета делает",
+    image: cameraIcon,
+    icon: cameraIcon,
+    byteCost: '2 500',
+    ingredients: [exoChip],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Малый гудок-труба",
+    description: "Чета делает",
+    image: hornIcon,
+    icon: hornIcon,
+    byteCost: '1 000',
+    ingredients: [resin],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Малый гудок-пищалка",
+    description: "Чета делает",
+    image: hornIcon,
+    icon: hornIcon,
+    byteCost: 'Нельзя распечатать',
+    ingredients: [nothing],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Голографич. фигура",
+    description: "Чета делает",
+    image: figurineIcon,
+    icon: figurineIcon,
+    byteCost: '3 000',
+    ingredients: [plastic],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Каменная фигура",
+    description: "Чета делает",
+    image: figurineIcon,
+    icon: figurineIcon,
+    byteCost: 'Нельзя распечатать',
+    ingredients: [nothing],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Анализатор почвы",
+    description: "Чета делает",
+    image: augmentIcon,
+    icon: augmentIcon,
+    byteCost: '2 000',
+    ingredients: [zinc],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Сканер зондов",
+    description: "Чета делает",
+    image: scannerIcon,
+    icon: scannerIcon,
+    byteCost: '4 000',
+    ingredients: [steel],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Джетпак на тв. топливе",
+    description: "Чета делает",
+    image: engineI,
+    icon: engineI,
+    byteCost: '5 000',
+    ingredients: [aluminiumAlloy],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Гидразиновый джетпак",
+    description: "Чета делает",
+    image: engineI,
+    icon: engineI,
+    byteCost: '15 000',
+    ingredients: [titaniumAlloy],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Ховерборд",
+    description: "Чета делает",
+    image: hoverboardIcon,
+    icon: hoverboardIcon,
+    byteCost: 'Разблокировывается в миссии',
+    ingredients: [exoChip],
+    printerLevel: "Портативный",
+    category: "Прочее",
+  ),
+  CraftableModule(
+    name: "Мини-РТГ",
+    description: "Чета делает",
+    image: generatorIcon,
+    icon: generatorIcon,
+    byteCost: 'Нельзя распечатать',
+    ingredients: [nothing],
+    printerLevel: "Портативный",
     category: "Прочее",
   ),
 ];
