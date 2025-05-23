@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
       ),
       _MenuItem(
         title: 'Модули и инструменты',
-        imagePath: 'assets/images/vesania.png',
+        imagePath: workLightIcon,
         onTap: () => Navigator.pushNamed(context, '/items'),
       ),
     ];
