@@ -77,28 +77,28 @@ class _GameItemsScreenState extends State<GameItemsScreen> {
               child: Stack(
                 children: [
                   Center(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(32),
-                      child: SizedBox(
-                        height: 120,
-                        width: 120,
-                        child: Image.asset(item.icon, fit: BoxFit.cover),
-                      ),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Padding(
-                      padding: const EdgeInsets.only(bottom: 6),
-                      child: Text(
-                        item.name,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(32),
+                          child: SizedBox(
+                            height: 120,
+                            width: 120,
+                            child: Image.asset(item.icon, fit: BoxFit.cover),
+                          ),
                         ),
-                      ),
+                        const SizedBox(height: 4),
+                        Text(
+                          item.name,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
