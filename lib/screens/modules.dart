@@ -69,6 +69,8 @@ class _GameItemsScreenState extends State<GameItemsScreen> {
               );
             },
             child: Container(
+              width: double.infinity,
+              height: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(color: Colors.lightBlueAccent, width: 2),
@@ -78,24 +80,32 @@ class _GameItemsScreenState extends State<GameItemsScreen> {
                 children: [
                   Center(
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(32),
-                          child: SizedBox(
-                            height: 120,
-                            width: 120,
-                            child: Image.asset(item.icon, fit: BoxFit.cover),
+                        SizedBox(height: 8,),
+                        Container(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(32),
+                            child: SizedBox(
+                              height: 120,
+                              width: 120,
+                              child: Image.asset(item.icon, fit: BoxFit.cover),
+                            ),
                           ),
                         ),
-                        const SizedBox(height: 4),
-                        Text(
-                          item.name,
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
+                        Expanded(
+                          child: Center(
+                            child: Text(
+                              item.name,
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                                height: 1.0,
+                              ),
+                            ),
                           ),
                         ),
                       ],
