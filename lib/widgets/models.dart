@@ -167,7 +167,7 @@ List<Planet> planets = [
       clay,
       astronium,
     ],
-    gases: [metane, hydrogen],
+    gases: [methane, hydrogen],
     difficulty: 'Средняя',
     scale: 'Маленький',
     dayLength: '3 мин 30 сек',
@@ -222,7 +222,7 @@ List<Planet> planets = [
       clay,
       astronium,
     ],
-    gases: [metane, nitrogen, sulfur, helium],
+    gases: [methane, nitrogen, sulfur, helium],
     difficulty: 'Крайне высокая',
     scale: 'Средний',
     dayLength: '20 мин',
@@ -257,7 +257,7 @@ List<Planet> planets = [
       astronium,
     ],
     secondaryResourse: [nothing],
-    gases: [argone, helium, hydrogen, metane, nitrogen, sulfur],
+    gases: [argone, helium, hydrogen, methane, nitrogen, sulfur],
     difficulty: 'Средняя',
     scale: 'Очень большая',
     dayLength: '9 мин',
@@ -347,14 +347,24 @@ final List<Resource> exampleResources = [
     name: 'Соединение',
     icon: compoundIcon,
     image: compoundIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Соединение является одним из самых распространенных ресурсов',
     obtainedFrom: [
       Text(
-        'Можно найти на поверхности следующих планет:',
+        'Найти на всех планетах',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      Text('На всех планетах в изобилии'),
+      Text(
+        'Получить с помощью центрифуги почвы',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text(
+        'Обменять на платформе обмена',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
     ],
     usedIn: [
       IngredientsList(ingredients: [copper]),
@@ -366,14 +376,23 @@ final List<Resource> exampleResources = [
     name: 'Смола',
     icon: resinIcon,
     image: resinIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description: 'Смола является одним из самых распространенных ресурсов',
     obtainedFrom: [
       Text(
-        'Можно найти на поверхности следующих планет:',
+        'Найти на всех планетах',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      Text('На всех планетах в изобилии'),
+      Text(
+        'Получить с помощью центрифуги почвы',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text(
+        'Обменять на платформе обмена',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
     ],
     usedIn: [
       IngredientsList(ingredients: [copper]),
@@ -385,14 +404,24 @@ final List<Resource> exampleResources = [
     name: 'Глина',
     icon: clayIcon,
     image: clayIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Глина — природный ресурс, используется для получения керамики',
     obtainedFrom: [
       Text(
-        'Можно найти на поверхности следующих планет:',
+        'Найти на всех планетах',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      Text('На всех планетах в изобилии'),
+      Text(
+        'Получить с помощью центрифуги почвы',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text(
+        'Обменять на платформе обмена',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
     ],
     usedIn: [
       IngredientsList(ingredients: [copper]),
@@ -404,14 +433,23 @@ final List<Resource> exampleResources = [
     name: 'Графит',
     icon: graphiteIcon,
     image: graphiteIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description: 'Графит является одним из самых распространенных ресурсов',
     obtainedFrom: [
       Text(
-        'Можно найти на поверхности следующих планет:',
+        'Найти на всех планетах',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      Text('На всех планетах в изобилии'),
+      Text(
+        'Получить с помощью центрифуги почвы',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text(
+        'Обменять на платформе обмена',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
     ],
     usedIn: [
       IngredientsList(ingredients: [copper]),
@@ -423,14 +461,19 @@ final List<Resource> exampleResources = [
     name: 'Латерит',
     icon: lateriteIcon,
     image: lateriteIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Латерит — природный ресурс, используется для получения алюминия',
     obtainedFrom: [
       Text(
-        'Можно найти на поверхности следующих планет:',
+        'Найти на всех планетах',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      Text('На всех планетах в изобилии'),
+      Text(
+        'Обменять на платформе обмена',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
     ],
     usedIn: [
       IngredientsList(ingredients: [copper]),
@@ -442,14 +485,22 @@ final List<Resource> exampleResources = [
     name: 'Гематит',
     icon: hematiteIcon,
     image: hematiteIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Гематит — природный ресурс, используется для получения железа',
     obtainedFrom: [
       Text(
-        'Можно найти на поверхности следующих планет:',
+        'Можно найти на следующих планетах:',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      Text('На всех планетах в изобилии'),
+      bulletWithIcon(novusIcon, "Новус"),
+      bulletWithIcon(glacioIcon, "Гласио"),
+      const SizedBox(height: 8),
+      Text(
+        'Обменять на платформе обмена',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
     ],
     usedIn: [
       IngredientsList(ingredients: [copper]),
@@ -461,14 +512,22 @@ final List<Resource> exampleResources = [
     name: 'Литий',
     icon: lithiumIcon,
     image: lithiumIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Литий — природный ресурс, используется для получения производства генераторов и батарей',
     obtainedFrom: [
       Text(
-        'Можно найти на поверхности следующих планет:',
+        'Можно найти на следующих планетах:',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      Text('На всех планетах в изобилии'),
+      bulletWithIcon(vesaniaIcon, "Везания"),
+      bulletWithIcon(novusIcon, "Новус"),
+      const SizedBox(height: 8),
+      Text(
+        'Обменять на платформе обмена',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
     ],
     usedIn: [
       IngredientsList(ingredients: [copper]),
@@ -480,14 +539,21 @@ final List<Resource> exampleResources = [
     name: 'Малахит',
     icon: malachiteIcon,
     image: malachiteIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description: 'Малахит — природный ресурс, используется для получения меди',
     obtainedFrom: [
       Text(
-        'Можно найти на поверхности следующих планет:',
+        'Можно найти на следующих планетах:',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      Text('На всех планетах в изобилии'),
+      bulletWithIcon(sylvaIcon, "Сильва"),
+      bulletWithIcon(calidorIcon, "Калидор"),
+      const SizedBox(height: 8),
+      Text(
+        'Обменять на платформе обмена',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
     ],
     usedIn: [
       IngredientsList(ingredients: [copper]),
@@ -499,14 +565,23 @@ final List<Resource> exampleResources = [
     name: 'Органика',
     icon: organicIcon,
     image: organicIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description: 'Органика является наиболее распространенным ресурсом',
     obtainedFrom: [
       Text(
-        'Можно найти на поверхности следующих планет:',
+        'Найти на всех планетах',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      Text('На всех планетах в изобилии'),
+      Text(
+        'Получить с помощью центрифуги почвы',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text(
+        'Обменять на платформе обмена',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
     ],
     usedIn: [
       IngredientsList(ingredients: [copper]),
@@ -518,14 +593,23 @@ final List<Resource> exampleResources = [
     name: 'Кварц',
     icon: quartzIcon,
     image: quartzIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description: 'Кварц — природный ресурс, используется для получения стекла',
     obtainedFrom: [
       Text(
-        'Можно найти на поверхности следующих планет:',
+        'Найти на всех планетах',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      Text('На всех планетах в изобилии'),
+      Text(
+        'Получить с помощью центрифуги почвы',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text(
+        'Обменять на платформе обмена',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
     ],
     usedIn: [
       IngredientsList(ingredients: [copper]),
@@ -537,14 +621,22 @@ final List<Resource> exampleResources = [
     name: 'Сфалерит',
     icon: sphaleriteIcon,
     image: sphaleriteIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Сфалерит — природный ресурс, используется для получения цинка',
     obtainedFrom: [
       Text(
-        'Можно найти на поверхности следующих планет:',
+        'Можно найти на следующих планетах:',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      Text('На всех планетах в изобилии'),
+      bulletWithIcon(sylvaIcon, "Сильва"),
+      bulletWithIcon(desoloIcon, "Дезоло"),
+      const SizedBox(height: 8),
+      Text(
+        'Обменять на платформе обмена',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
     ],
     usedIn: [
       IngredientsList(ingredients: [copper]),
@@ -556,14 +648,22 @@ final List<Resource> exampleResources = [
     name: 'Титанит',
     icon: titaniteIcon,
     image: titaniteIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Титанит — природный ресурс, используется для получения титана',
     obtainedFrom: [
       Text(
-        'Можно найти на поверхности следующих планет:',
+        'Можно найти на следующих планетах:',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      Text('На всех планетах в изобилии'),
+      bulletWithIcon(vesaniaIcon, "Везания"),
+      bulletWithIcon(glacioIcon, "Гласио"),
+      const SizedBox(height: 8),
+      Text(
+        'Обменять на платформе обмена',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
     ],
     usedIn: [
       IngredientsList(ingredients: [copper]),
@@ -575,14 +675,22 @@ final List<Resource> exampleResources = [
     name: 'Вольфрамит',
     icon: wolframiteIcon,
     image: wolframiteIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Вольфрамит — природный ресурс, используется для получения вольфрама',
     obtainedFrom: [
       Text(
-        'Можно найти на поверхности следующих планет:',
+        'Можно найти на следующих планетах:',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      Text('На всех планетах в изобилии'),
+      bulletWithIcon(desoloIcon, "Дезоло"),
+      bulletWithIcon(calidorIcon, "Калидор"),
+      const SizedBox(height: 8),
+      Text(
+        'Обменять на платформе обмена',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
     ],
     usedIn: [
       IngredientsList(ingredients: [copper]),
@@ -594,14 +702,24 @@ final List<Resource> exampleResources = [
     name: 'Аммоний',
     icon: ammoniumIcon,
     image: ammoniumIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Аммоний — природный ресурс, используется для получения топлива',
     obtainedFrom: [
       Text(
-        'Можно найти на поверхности следующих планет:',
+        'Найти на всех планетах',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      Text('На всех планетах в изобилии'),
+      Text(
+        'Получить с помощью центрифуги почвы',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Text(
+        'Обменять на платформе обмена',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
     ],
     usedIn: [
       IngredientsList(ingredients: [copper]),
@@ -613,14 +731,14 @@ final List<Resource> exampleResources = [
     name: 'Астрониум',
     icon: astroniumIcon,
     image: astroniumIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Астрониум — природный ресурс, используется в основном на платформе обмена',
     obtainedFrom: [
       Text(
-        'Можно найти на поверхности следующих планет:',
+        'Найти около ядер всех планет',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      Text('На всех планетах в изобилии'),
     ],
     usedIn: [
       IngredientsList(ingredients: [copper]),
@@ -632,17 +750,14 @@ final List<Resource> exampleResources = [
     name: 'Аргон',
     icon: argoneIcon,
     image: argoneIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description: 'Аргон - газ, собирается с помощью атмосферного конденсатора',
     obtainedFrom: [
       Text(
         'Собирается с помощью атмосферного конденсатора на следующих планетах:',
+        style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      bulletWithIcon('assets/icons/novusI.png', 'Новус — высокое содержание'),
-      bulletWithIcon(
-        'assets/icons/vesaniaI.png',
-        'Весания — умеренное содержание',
-      ),
+      bulletWithIcon(glacioIcon, 'Гласио — 100 ppu'),
     ],
     usedIn: [
       IngredientsList(ingredients: [astronium]),
@@ -652,19 +767,17 @@ final List<Resource> exampleResources = [
 
   Resource(
     name: 'Метан',
-    icon: metaneIcon,
-    image: metaneIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    icon: methaneIcon,
+    image: methaneIcon,
+    description: 'Метан - газ, собирается с помощью атмосферного конденсатора',
     obtainedFrom: [
       Text(
         'Собирается с помощью атмосферного конденсатора на следующих планетах:',
+        style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      bulletWithIcon('assets/icons/novusI.png', 'Новус — высокое содержание'),
-      bulletWithIcon(
-        'assets/icons/vesaniaI.png',
-        'Весания — умеренное содержание',
-      ),
+      bulletWithIcon(novusIcon, 'Новус — 75 ppu'),
+      bulletWithIcon(atroxIcon, 'Атрокс — 100 ppu'),
     ],
     usedIn: [
       IngredientsList(ingredients: [astronium]),
@@ -676,38 +789,38 @@ final List<Resource> exampleResources = [
     name: 'Водород',
     icon: hydrogenIcon,
     image: hydrogenIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description: 'Водород - газ, собирается с помощью атмосферного конденсатора',
     obtainedFrom: [
       Text(
         'Собирается с помощью атмосферного конденсатора на следующих планетах:',
+        style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      bulletWithIcon('assets/icons/novusI.png', 'Новус — высокое содержание'),
-      bulletWithIcon(
-        'assets/icons/vesaniaI.png',
-        'Весания — умеренное содержание',
-      ),
+      bulletWithIcon(sylvaIcon, 'Сильва — 75 ppu'),
+      bulletWithIcon(calidorIcon, 'Калидор — 50 ppu'),
+      bulletWithIcon(vesaniaIcon, 'Везания — 100 ppu'),
+      bulletWithIcon(novusIcon, 'Новус — 25 ppu'),
     ],
     usedIn: [
       IngredientsList(ingredients: [astronium]),
     ],
     category: 'Газ',
   ),
+
   Resource(
     name: 'Азот',
     icon: nitrogenIcon,
     image: nitrogenIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description: 'Азот - газ, собирается с помощью атмосферного конденсатора',
     obtainedFrom: [
       Text(
         'Собирается с помощью атмосферного конденсатора на следующих планетах:',
+        style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      bulletWithIcon('assets/icons/novusI.png', 'Новус — высокое содержание'),
-      bulletWithIcon(
-        'assets/icons/vesaniaI.png',
-        'Весания — умеренное содержание',
-      ),
+      bulletWithIcon(sylvaIcon, 'Сильва — 100 ppu'),
+      bulletWithIcon(vesaniaIcon, 'Везания — 75 ppu'),
+      bulletWithIcon(atroxIcon, 'Атрокс — 50 ppu'),
     ],
     usedIn: [
       IngredientsList(ingredients: [astronium]),
@@ -719,17 +832,14 @@ final List<Resource> exampleResources = [
     name: 'Гелий',
     icon: heliumIcon,
     image: heliumIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description: 'Гелий - газ, собирается с помощью атмосферного конденсатора',
     obtainedFrom: [
       Text(
         'Собирается с помощью атмосферного конденсатора на следующих планетах:',
+        style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      bulletWithIcon('assets/icons/novusI.png', 'Новус — высокое содержание'),
-      bulletWithIcon(
-        'assets/icons/vesaniaI.png',
-        'Весания — умеренное содержание',
-      ),
+      bulletWithIcon(atroxIcon, 'Атрокс — 25 ppu'),
     ],
     usedIn: [
       IngredientsList(ingredients: [astronium]),
@@ -741,17 +851,15 @@ final List<Resource> exampleResources = [
     name: 'Сера',
     icon: sulfurIcon,
     image: sulfurIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description: 'Сера - газ, собирается с помощью атмосферного конденсатора',
     obtainedFrom: [
       Text(
         'Собирается с помощью атмосферного конденсатора на следующих планетах:',
+        style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      bulletWithIcon('assets/icons/novusI.png', 'Новус — высокое содержание'),
-      bulletWithIcon(
-        'assets/icons/vesaniaI.png',
-        'Весания — умеренное содержание',
-      ),
+      bulletWithIcon(calidorIcon, 'Калидор — 100 ppu'),
+      bulletWithIcon(atroxIcon, 'Атрокс — 75 ppu'),
     ],
     usedIn: [
       IngredientsList(ingredients: [astronium]),
@@ -763,30 +871,25 @@ final List<Resource> exampleResources = [
     name: 'Керамика',
     icon: ceramicsIcon,
     image: ceramicsIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description: 'Керамика — переплавленный ресурс, получается из глины',
     obtainedFrom: [
       Text(
-        'Получается путём переплавки сфалерита в плавильне.',
+        'Получается путём переплавки глины в плавильне.',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
       Row(
         children: [
-          Image.asset('assets/icons/sphalerite.png', width: 32, height: 32),
-          const SizedBox(width: 8),
-          const Text('1 × Сфалерит → 1 × Цинк'),
+          Image.asset(clayIcon, width: 32),
+          SizedBox(width: 8),
+          Text('Глина'),
+          Icon(Icons.arrow_right, color: Colors.white),
+          Image.asset(ceramicsIcon, width: 32),
+          SizedBox(width: 8),
+          Text('Керамика'),
         ],
       ),
       const SizedBox(height: 12),
-      Text(
-        'Где найти сфалерит:',
-        style: TextStyle(fontWeight: FontWeight.bold),
-      ),
-      bulletWithIcon(
-        'assets/icons/desoloI.png',
-        'Десоло — на поверхности и в пещерах (в изобилии)',
-      ),
-      bulletWithIcon('assets/icons/calI.png', 'Калидор — в пещерах'),
     ],
     usedIn: [
       IngredientsList(ingredients: [astronium]),
@@ -798,30 +901,25 @@ final List<Resource> exampleResources = [
     name: 'Углерод',
     icon: carbonIcon,
     image: carbonIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description: 'Углерод — переплавленный ресурс, получается из органики',
     obtainedFrom: [
       Text(
-        'Получается путём переплавки сфалерита в плавильне.',
+        'Получается путём переплавки органики в плавильне.',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
       Row(
         children: [
-          Image.asset('assets/icons/sphalerite.png', width: 32, height: 32),
-          const SizedBox(width: 8),
-          const Text('1 × Сфалерит → 1 × Цинк'),
+          Image.asset(organicIcon, width: 32),
+          SizedBox(width: 8),
+          Text('Органика'),
+          Icon(Icons.arrow_right, color: Colors.white),
+          Image.asset(carbonIcon, width: 32),
+          SizedBox(width: 8),
+          Text('Углерод'),
         ],
       ),
       const SizedBox(height: 12),
-      Text(
-        'Где найти сфалерит:',
-        style: TextStyle(fontWeight: FontWeight.bold),
-      ),
-      bulletWithIcon(
-        'assets/icons/desoloI.png',
-        'Десоло — на поверхности и в пещерах (в изобилии)',
-      ),
-      bulletWithIcon('assets/icons/calI.png', 'Калидор — в пещерах'),
     ],
     usedIn: [
       IngredientsList(ingredients: [astronium]),
@@ -833,30 +931,25 @@ final List<Resource> exampleResources = [
     name: 'Медь',
     icon: copperIcon,
     image: copperIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description: 'Медь — переплавленный ресурс, получается из малахита',
     obtainedFrom: [
       Text(
-        'Получается путём переплавки сфалерита в плавильне.',
+        'Получается путём переплавки малахита в плавильне.',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
       Row(
         children: [
-          Image.asset('assets/icons/sphalerite.png', width: 32, height: 32),
-          const SizedBox(width: 8),
-          const Text('1 × Сфалерит → 1 × Цинк'),
+          Image.asset(malachiteIcon, width: 32),
+          SizedBox(width: 8),
+          Text('Малахит'),
+          Icon(Icons.arrow_right, color: Colors.white),
+          Image.asset(copperIcon, width: 32),
+          SizedBox(width: 8),
+          Text('Медь'),
         ],
       ),
       const SizedBox(height: 12),
-      Text(
-        'Где найти сфалерит:',
-        style: TextStyle(fontWeight: FontWeight.bold),
-      ),
-      bulletWithIcon(
-        'assets/icons/desoloI.png',
-        'Десоло — на поверхности и в пещерах (в изобилии)',
-      ),
-      bulletWithIcon('assets/icons/calI.png', 'Калидор — в пещерах'),
     ],
     usedIn: [
       IngredientsList(ingredients: [astronium]),
@@ -868,30 +961,25 @@ final List<Resource> exampleResources = [
     name: 'Стекло',
     icon: glassIcon,
     image: glassIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description: 'Стекло — переплавленный ресурс, получается из кварца',
     obtainedFrom: [
       Text(
-        'Получается путём переплавки сфалерита в плавильне.',
+        'Получается путём переплавки кварца в плавильне.',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
       Row(
         children: [
-          Image.asset('assets/icons/sphalerite.png', width: 32, height: 32),
-          const SizedBox(width: 8),
-          const Text('1 × Сфалерит → 1 × Цинк'),
+          Image.asset(quartzIcon, width: 32),
+          SizedBox(width: 8),
+          Text('Кварц'),
+          Icon(Icons.arrow_right, color: Colors.white),
+          Image.asset(glassIcon, width: 32),
+          SizedBox(width: 8),
+          Text('Стекло'),
         ],
       ),
       const SizedBox(height: 12),
-      Text(
-        'Где найти сфалерит:',
-        style: TextStyle(fontWeight: FontWeight.bold),
-      ),
-      bulletWithIcon(
-        'assets/icons/desoloI.png',
-        'Десоло — на поверхности и в пещерах (в изобилии)',
-      ),
-      bulletWithIcon('assets/icons/calI.png', 'Калидор — в пещерах'),
     ],
     usedIn: [
       IngredientsList(ingredients: [astronium]),
@@ -903,7 +991,97 @@ final List<Resource> exampleResources = [
     name: 'Железо',
     icon: ironIcon,
     image: ironIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description: 'Железо — переплавленный ресурс, получается из гематита',
+    obtainedFrom: [
+      Text(
+        'Получается путём переплавки гематита в плавильне.',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Row(
+        children: [
+          Image.asset(hematiteIcon, width: 32),
+          SizedBox(width: 8),
+          Text('Гематит'),
+          Icon(Icons.arrow_right, color: Colors.white),
+          Image.asset(ironIcon, width: 32),
+          SizedBox(width: 8),
+          Text('Железо'),
+        ],
+      ),
+      const SizedBox(height: 12),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [astronium]),
+    ],
+    category: 'Очищенный',
+  ),
+
+  Resource(
+    name: 'Титан',
+    icon: titaniumIcon,
+    image: titaniumIcon,
+    description: 'Титан — переплавленный ресурс, получается из титанита',
+    obtainedFrom: [
+      Text(
+        'Получается путём переплавки титанита в плавильне.',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Row(
+        children: [
+          Image.asset(titaniteIcon, width: 32),
+          SizedBox(width: 8),
+          Text('Титанит'),
+          Icon(Icons.arrow_right, color: Colors.white),
+          Image.asset(titaniumIcon, width: 32),
+          SizedBox(width: 8),
+          Text('Титан'),
+        ],
+      ),
+      const SizedBox(height: 12),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [astronium]),
+    ],
+    category: 'Очищенный',
+  ),
+
+  Resource(
+    name: 'Вольфрам',
+    icon: tungstenIcon,
+    image: tungstenIcon,
+    description: 'Вольфрам — переплавленный ресурс, получается из вольфрамита',
+    obtainedFrom: [
+      Text(
+        'Получается путём переплавки вольфрамита в плавильне.',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 8),
+      Row(
+        children: [
+          Image.asset(wolframiteIcon, width: 32),
+          SizedBox(width: 8),
+          Text('Вольфрам'),
+          Icon(Icons.arrow_right, color: Colors.white),
+          Image.asset(tungstenIcon, width: 32),
+          SizedBox(width: 8),
+          Text('Вольфрамит'),
+        ],
+      ),
+      const SizedBox(height: 12),
+    ],
+    usedIn: [
+      IngredientsList(ingredients: [astronium]),
+    ],
+    category: 'Очищенный',
+  ),
+
+  Resource(
+    name: 'Цинк',
+    icon: zincIcon,
+    image: zincIcon,
+    description: 'Цинк — переплавленный ресурс, получается из сфалерита',
     obtainedFrom: [
       Text(
         'Получается путём переплавки сфалерита в плавильне.',
@@ -922,120 +1100,6 @@ final List<Resource> exampleResources = [
         ],
       ),
       const SizedBox(height: 12),
-      Text(
-        'Где найти сфалерит:',
-        style: TextStyle(fontWeight: FontWeight.bold),
-      ),
-      bulletWithIcon(
-        'assets/icons/desoloI.png',
-        'Десоло — на поверхности и в пещерах (в изобилии)',
-      ),
-      bulletWithIcon('assets/icons/calI.png', 'Калидор — в пещерах'),
-    ],
-    usedIn: [
-      IngredientsList(ingredients: [astronium]),
-    ],
-    category: 'Очищенный',
-  ),
-
-  Resource(
-    name: 'Титан',
-    icon: titaniumIcon,
-    image: titaniumIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: [
-      Text(
-        'Получается путём переплавки сфалерита в плавильне.',
-        style: TextStyle(fontWeight: FontWeight.bold),
-      ),
-      const SizedBox(height: 8),
-      Row(
-        children: [
-          Image.asset('assets/icons/sphalerite.png', width: 32, height: 32),
-          const SizedBox(width: 8),
-          const Text('1 × Сфалерит → 1 × Цинк'),
-        ],
-      ),
-      const SizedBox(height: 12),
-      Text(
-        'Где найти сфалерит:',
-        style: TextStyle(fontWeight: FontWeight.bold),
-      ),
-      bulletWithIcon(
-        'assets/icons/desoloI.png',
-        'Десоло — на поверхности и в пещерах (в изобилии)',
-      ),
-      bulletWithIcon('assets/icons/calI.png', 'Калидор — в пещерах'),
-    ],
-    usedIn: [
-      IngredientsList(ingredients: [astronium]),
-    ],
-    category: 'Очищенный',
-  ),
-
-  Resource(
-    name: 'Вольфрам',
-    icon: tungstenIcon,
-    image: tungstenIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: [
-      Text(
-        'Получается путём переплавки сфалерита в плавильне.',
-        style: TextStyle(fontWeight: FontWeight.bold),
-      ),
-      const SizedBox(height: 8),
-      Row(
-        children: [
-          Image.asset('assets/icons/sphalerite.png', width: 32, height: 32),
-          const SizedBox(width: 8),
-          const Text('1 × Сфалерит → 1 × Цинк'),
-        ],
-      ),
-      const SizedBox(height: 12),
-      Text(
-        'Где найти сфалерит:',
-        style: TextStyle(fontWeight: FontWeight.bold),
-      ),
-      bulletWithIcon(
-        'assets/icons/desoloI.png',
-        'Десоло — на поверхности и в пещерах (в изобилии)',
-      ),
-      bulletWithIcon('assets/icons/calI.png', 'Калидор — в пещерах'),
-    ],
-    usedIn: [
-      IngredientsList(ingredients: [astronium]),
-    ],
-    category: 'Очищенный',
-  ),
-
-  Resource(
-    name: 'Цинк',
-    icon: zincIcon,
-    image: zincIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
-    obtainedFrom: [
-      Text(
-        'Получается путём переплавки сфалерита в плавильне.',
-        style: TextStyle(fontWeight: FontWeight.bold),
-      ),
-      const SizedBox(height: 8),
-      Row(
-        children: [
-          Image.asset('assets/icons/sphalerite.png', width: 32, height: 32),
-          const SizedBox(width: 8),
-          const Text('1 × Сфалерит → 1 × Цинк'),
-        ],
-      ),
-      const SizedBox(height: 12),
-      Text(
-        'Где найти сфалерит:',
-        style: TextStyle(fontWeight: FontWeight.bold),
-      ),
-      bulletWithIcon(
-        'assets/icons/desoloI.png',
-        'Десоло — на поверхности и в пещерах (в изобилии)',
-      ),
-      bulletWithIcon('assets/icons/calI.png', 'Калидор — в пещерах'),
     ],
     usedIn: [
       IngredientsList(ingredients: [astronium]),
@@ -1046,30 +1110,25 @@ final List<Resource> exampleResources = [
     name: 'Алюминий',
     icon: aluminiumIcon,
     image: aluminiumIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description: 'Алюминий — переплавленный ресурс, получается из латерита',
     obtainedFrom: [
       Text(
-        'Получается путём переплавки сфалерита в плавильне.',
+        'Получается путём переплавки латерита в плавильне.',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
       Row(
         children: [
-          Image.asset(aluminiumIcon, width: 32, height: 32),
-          const SizedBox(width: 8),
-          const Text('1 × Сфалерит → 1 × Цинк'),
+          Image.asset(lateriteIcon, width: 32),
+          SizedBox(width: 8),
+          Text('Латерит'),
+          Icon(Icons.arrow_right, color: Colors.white),
+          Image.asset(aluminiumIcon, width: 32),
+          SizedBox(width: 8),
+          Text('Алюминий'),
         ],
       ),
       const SizedBox(height: 12),
-      Text(
-        'Где найти сфалерит:',
-        style: TextStyle(fontWeight: FontWeight.bold),
-      ),
-      bulletWithIcon(
-        'assets/icons/desoloI.png',
-        'Десоло — на поверхности и в пещерах (в изобилии)',
-      ),
-      bulletWithIcon('assets/icons/calI.png', 'Калидор — в пещерах'),
     ],
     usedIn: [
       IngredientsList(ingredients: [astronium]),
@@ -1081,14 +1140,15 @@ final List<Resource> exampleResources = [
     name: 'Алюминиевый сплав',
     icon: aluminiumAlloyIcon,
     image: aluminiumAlloyIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Алюминиевый сплав - сложный ресурс, синтезируется в химической лаборатории',
     obtainedFrom: [
       Text(
         'Создаётся в Химической лаборатории из:',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+      IngredientsList(ingredients: [aluminium, copper]),
     ],
     usedIn: [
       IngredientsList(ingredients: [tungstenCarbide]),
@@ -1100,14 +1160,15 @@ final List<Resource> exampleResources = [
     name: 'Алмаз',
     icon: diamondIcon,
     image: diamondIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Алмаз - сложный ресурс, синтезируется в химической лаборатории',
     obtainedFrom: [
       Text(
         'Создаётся в Химической лаборатории из:',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+      IngredientsList(ingredients: [graphene, graphene]),
     ],
     usedIn: [
       IngredientsList(ingredients: [tungstenCarbide]),
@@ -1119,7 +1180,8 @@ final List<Resource> exampleResources = [
     name: 'Порох',
     icon: explosivePowderIcon,
     image: explosivePowderIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Порох - сложный ресурс, синтезируется в химической лаборатории',
     obtainedFrom: [
       Text(
         'Создаётся в Химической лаборатории из:',
@@ -1138,14 +1200,15 @@ final List<Resource> exampleResources = [
     name: 'Графен',
     icon: grapheneIcon,
     image: grapheneIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Графен - сложный ресурс, синтезируется в химической лаборатории',
     obtainedFrom: [
       Text(
         'Создаётся в Химической лаборатории из:',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+      IngredientsList(ingredients: [graphite, hydrazine]),
     ],
     usedIn: [
       IngredientsList(ingredients: [tungstenCarbide]),
@@ -1157,14 +1220,15 @@ final List<Resource> exampleResources = [
     name: 'Гидразин',
     icon: hydrazineIcon,
     image: hydrazineIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Гидразин - сложный ресурс, синтезируется в химической лаборатории',
     obtainedFrom: [
       Text(
         'Создаётся в Химической лаборатории из:',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+      IngredientsList(ingredients: [ammonium, ammonium, hydrogen]),
     ],
     usedIn: [
       IngredientsList(ingredients: [tungstenCarbide]),
@@ -1176,14 +1240,15 @@ final List<Resource> exampleResources = [
     name: 'Наноуглеродный сплав',
     icon: nanocarbonAlloyIcon,
     image: nanocarbonAlloyIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Наноуглеродный сплав - сложный ресурс, синтезируется в химической лаборатории',
     obtainedFrom: [
       Text(
         'Создаётся в Химической лаборатории из:',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+      IngredientsList(ingredients: [titaniumAlloy, steel, helium]),
     ],
     usedIn: [
       IngredientsList(ingredients: [tungstenCarbide]),
@@ -1195,14 +1260,15 @@ final List<Resource> exampleResources = [
     name: 'Пластик',
     icon: plasticIcon,
     image: plasticIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Пластик - сложный ресурс, синтезируется в химической лаборатории',
     obtainedFrom: [
       Text(
         'Создаётся в Химической лаборатории из:',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+      IngredientsList(ingredients: [compound, carbon]),
     ],
     usedIn: [
       IngredientsList(ingredients: [tungstenCarbide]),
@@ -1214,14 +1280,15 @@ final List<Resource> exampleResources = [
     name: 'Резина',
     icon: rubberIcon,
     image: rubberIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Резина - сложный ресурс, синтезируется в химической лаборатории',
     obtainedFrom: [
       Text(
         'Создаётся в Химической лаборатории из:',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+      IngredientsList(ingredients: [organic, resin]),
     ],
     usedIn: [
       IngredientsList(ingredients: [tungstenCarbide]),
@@ -1233,14 +1300,15 @@ final List<Resource> exampleResources = [
     name: 'Силикон',
     icon: siliconeIcon,
     image: siliconeIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Силикон - сложный ресурс, синтезируется в химической лаборатории',
     obtainedFrom: [
       Text(
         'Создаётся в Химической лаборатории из:',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+      IngredientsList(ingredients: [resin, quartz, methane]),
     ],
     usedIn: [
       IngredientsList(ingredients: [tungstenCarbide]),
@@ -1252,14 +1320,15 @@ final List<Resource> exampleResources = [
     name: 'Сталь',
     icon: steelIcon,
     image: steelIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Сталь - сложный ресурс, синтезируется в химической лаборатории',
     obtainedFrom: [
       Text(
         'Создаётся в Химической лаборатории из:',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+      IngredientsList(ingredients: [iron, carbon, argone]),
     ],
     usedIn: [
       IngredientsList(ingredients: [tungstenCarbide]),
@@ -1271,14 +1340,15 @@ final List<Resource> exampleResources = [
     name: 'Титановый сплав',
     icon: titaniumAlloyIcon,
     image: titaniumAlloyIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Титановый сплав - сложный ресурс, синтезируется в химической лаборатории',
     obtainedFrom: [
       Text(
         'Создаётся в Химической лаборатории из:',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+      IngredientsList(ingredients: [titanium, graphene, nitrogen]),
     ],
     usedIn: [
       IngredientsList(ingredients: [tungstenCarbide]),
@@ -1290,14 +1360,15 @@ final List<Resource> exampleResources = [
     name: 'Карбид вольфрама',
     icon: tungstenCarbideIcon,
     image: tungstenCarbideIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Карбид вольфрама - сложный ресурс, синтезируется в химической лаборатории',
     obtainedFrom: [
       Text(
         'Создаётся в Химической лаборатории из:',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
-      IngredientsList(ingredients: [carbon, carbon, sulfur]),
+      IngredientsList(ingredients: [carbon, tungsten]),
     ],
     usedIn: [
       IngredientsList(ingredients: [tungstenCarbide]),
@@ -1309,15 +1380,13 @@ final List<Resource> exampleResources = [
     name: 'Почва',
     icon: soilIcon,
     image: soilIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'Почва — природный ресурс, используется для выравнивания местности.',
     obtainedFrom: [
       Text(
-        'Доступен следующими способами:',
+        'Собрать в маленький контейнер инструментом изменения рельефа',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
-      Text('Взрыв повреждённых контейнеров с помощью динамита'),
-      Text('Покупка за байты в некоторых событиях EXO'),
-      Text('В редких случаях — награда за задания'),
     ],
     usedIn: [
       IngredientsList(ingredients: [aluminiumAlloy]),
@@ -1326,45 +1395,44 @@ final List<Resource> exampleResources = [
   ),
 
   Resource(
-    name: 'EXO чип',
+    name: 'EXO-чип',
     icon: exoChipIcon,
     image: exoChipIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description:
+        'EXO-чип — природный ресурс, используется для сложных устройств.',
     obtainedFrom: [
       Text(
         'Доступен следующими способами:',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
-      Text('Взрыв повреждённых контейнеров с помощью динамита'),
-      Text('Покупка за байты в некоторых событиях EXO'),
-      Text('В редких случаях — награда за задания'),
+      Text(
+        'Найти внутри EXO-тайников с помощью динамита или других взрывных веществ',
+      ),
+      Text(
+        'Обменять на платформе обмена',
+      ),
     ],
     usedIn: [
       IngredientsList(ingredients: [aluminiumAlloy]),
     ],
-    category: 'ыВВ',
+    category: 'ИДЕМ РАБОТАТЬ ЗАВОД ППЛ СЕЙЧАС В ВОЙС',
   ),
 
   Resource(
     name: 'Лом',
     icon: scrapIcon,
     image: scrapIcon,
-    description: 'Малахит — природный ресурс, используется для получения меди.',
+    description: 'Лом — ресурс, получающийся из обломков.',
     obtainedFrom: [
       Text(
-        'Получается путём переработки мусора и сломанных предметов в Шредере.',
+        'Получается путём переработки обломков и других ресурсов в шредере.',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
-      const SizedBox(height: 8),
-      Text('Подбирай сломанное оборудование, найденное в мире'),
-      Text('Перерабатывай его в любом шредере'),
-      const SizedBox(height: 12),
-      Text('Обменивается на ресурсы через торговую платформу.'),
     ],
     usedIn: [
       IngredientsList(ingredients: [nanocarbonAlloy]),
     ],
-    category: 'СложыВВВЫный',
+    category: 'ИДЕМ РАБОТАТЬ ЗАВОД ППЛ СЕЙЧАС В ВОЙС',
   ),
 ];
 
@@ -1405,7 +1473,7 @@ final String astroniumIcon = 'assets/icons/astronium.png';
 final String malachiteIcon = 'assets/icons/malachite.png';
 
 final String argoneIcon = 'assets/icons/argone.png';
-final String metaneIcon = 'assets/icons/metane.png';
+final String methaneIcon = 'assets/icons/methane.png';
 final String hydrogenIcon = 'assets/icons/hydrogen.png';
 final String nitrogenIcon = 'assets/icons/nitrogen.png';
 final String heliumIcon = 'assets/icons/helium.png';
@@ -1456,7 +1524,7 @@ final List<Ingredient> allIngredients = [
   Ingredient(iconPath: malachiteIcon, name: 'Малахит'),
 
   Ingredient(iconPath: argoneIcon, name: 'Аргон'),
-  Ingredient(iconPath: metaneIcon, name: 'Метан'),
+  Ingredient(iconPath: methaneIcon, name: 'Метан'),
   Ingredient(iconPath: hydrogenIcon, name: 'Водород'),
   Ingredient(iconPath: nitrogenIcon, name: 'Азот'),
   Ingredient(iconPath: heliumIcon, name: 'Гелий'),
@@ -1487,7 +1555,7 @@ final List<Ingredient> allIngredients = [
   Ingredient(iconPath: tungstenCarbideIcon, name: 'Карбид вольфрама'),
 
   Ingredient(iconPath: soilIcon, name: 'Почва'),
-  Ingredient(iconPath: exoChipIcon, name: 'EXO чип'),
+  Ingredient(iconPath: exoChipIcon, name: 'EXO-чип'),
   Ingredient(iconPath: scrapIcon, name: 'Лом'),
   Ingredient(iconPath: canisterIcon, name: 'Заполненный маленький контейнер'),
 
@@ -1513,7 +1581,7 @@ final Ingredient astronium = allIngredients[13];
 final Ingredient malachite = allIngredients[14];
 
 final Ingredient argone = allIngredients[15];
-final Ingredient metane = allIngredients[16];
+final Ingredient methane = allIngredients[16];
 final Ingredient hydrogen = allIngredients[17];
 final Ingredient nitrogen = allIngredients[18];
 final Ingredient helium = allIngredients[19];
@@ -1555,7 +1623,7 @@ class CraftableModule {
   final String icon;
   final String byteCost;
   final List<Ingredient> ingredients;
-  final String printerLevel;
+  final String size;
   final String category;
 
   CraftableModule({
@@ -1565,7 +1633,7 @@ class CraftableModule {
     required this.icon,
     required this.byteCost,
     required this.ingredients,
-    required this.printerLevel,
+    required this.size,
     required this.category,
   });
 }
@@ -1634,8 +1702,8 @@ final List<CraftableModule> modules = [
     icon: smallIcon,
     byteCost: 'Разблокировано',
     ingredients: [compound],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Модули",
   ),
   CraftableModule(
     name: "Упаковщик",
@@ -1644,8 +1712,8 @@ final List<CraftableModule> modules = [
     icon: packagerIcon,
     byteCost: '1 000',
     ingredients: [graphite],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Блок выравнивания",
@@ -1654,8 +1722,8 @@ final List<CraftableModule> modules = [
     icon: levelingBlockIcon,
     byteCost: '500',
     ingredients: [fullSmallContainer],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Опоры",
@@ -1664,8 +1732,8 @@ final List<CraftableModule> modules = [
     icon: tetherIcon,
     byteCost: 'Разблокировано',
     ingredients: [compound],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Виджеты",
   ),
   CraftableModule(
     name: "Кислородые фильтры",
@@ -1674,8 +1742,8 @@ final List<CraftableModule> modules = [
     icon: oxygenIcon,
     byteCost: 'Разблокировано',
     ingredients: [resin],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Виджеты",
   ),
   CraftableModule(
     name: "Кислородный бак",
@@ -1684,8 +1752,8 @@ final List<CraftableModule> modules = [
     icon: oxygenIcon,
     byteCost: '2 000',
     ingredients: [glass],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Виджеты",
   ),
   CraftableModule(
     name: "Портативный генератор кислорода",
@@ -1694,8 +1762,8 @@ final List<CraftableModule> modules = [
     icon: oxygenatorIcon,
     byteCost: '10 000',
     ingredients: [nanocarbonAlloy],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Виджеты",
   ),
   CraftableModule(
     name: "Маленький контейнер",
@@ -1704,8 +1772,8 @@ final List<CraftableModule> modules = [
     icon: canisterIcon,
     byteCost: 'Разблокировано',
     ingredients: [resin],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Инструменты",
   ),
   CraftableModule(
     name: "Маячок",
@@ -1714,8 +1782,8 @@ final List<CraftableModule> modules = [
     icon: beaconIcon,
     byteCost: 'Разблокировано',
     ingredients: [quartz],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Желобок",
@@ -1724,8 +1792,8 @@ final List<CraftableModule> modules = [
     icon: tapperIcon,
     byteCost: '1 000',
     ingredients: [aluminium],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Модули",
   ),
   CraftableModule(
     name: "Рабочий фонарь",
@@ -1734,8 +1802,8 @@ final List<CraftableModule> modules = [
     icon: workLightIcon,
     byteCost: 'Разблокировано',
     ingredients: [copper],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Виджеты",
   ),
   CraftableModule(
     name: "Сигнальные огни",
@@ -1744,8 +1812,8 @@ final List<CraftableModule> modules = [
     icon: workLightIcon,
     byteCost: '350',
     ingredients: [organic],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Виджеты",
   ),
   CraftableModule(
     name: "Прожектор",
@@ -1754,8 +1822,8 @@ final List<CraftableModule> modules = [
     icon: workLightIcon,
     byteCost: '2 000',
     ingredients: [tungsten],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Виджеты",
   ),
   CraftableModule(
     name: "Малый генератор",
@@ -1764,8 +1832,8 @@ final List<CraftableModule> modules = [
     icon: generatorIcon,
     byteCost: 'Разблокировано',
     ingredients: [compound],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Мощность",
   ),
   CraftableModule(
     name: "Силовые ячейки",
@@ -1774,8 +1842,8 @@ final List<CraftableModule> modules = [
     icon: powerIcon,
     byteCost: 'Разблокировано',
     ingredients: [compound],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Виджеты",
   ),
   CraftableModule(
     name: "Малая солнечная панель",
@@ -1784,8 +1852,8 @@ final List<CraftableModule> modules = [
     icon: solarPanelIcon,
     byteCost: '800',
     ingredients: [copper],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Мощность",
   ),
   CraftableModule(
     name: "Малая ветротурбина",
@@ -1794,8 +1862,8 @@ final List<CraftableModule> modules = [
     icon: windTurbineIcon,
     byteCost: '800',
     ingredients: [copper],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Мощность",
   ),
   CraftableModule(
     name: "Малая батарея",
@@ -1804,8 +1872,8 @@ final List<CraftableModule> modules = [
     icon: batteryIcon,
     byteCost: '2 000',
     ingredients: [zinc],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Мощность",
   ),
   CraftableModule(
     name: "Модиф. ускорения",
@@ -1814,8 +1882,8 @@ final List<CraftableModule> modules = [
     icon: augmentIcon,
     byteCost: '1 000',
     ingredients: [zinc],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Дополнения",
   ),
   CraftableModule(
     name: "Модификатор больших участков",
@@ -1824,8 +1892,8 @@ final List<CraftableModule> modules = [
     icon: augmentIcon,
     byteCost: '1 000',
     ingredients: [zinc],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Дополнения",
   ),
   CraftableModule(
     name: "Модификатор малых участков",
@@ -1834,8 +1902,8 @@ final List<CraftableModule> modules = [
     icon: augmentIcon,
     byteCost: '1 000',
     ingredients: [zinc],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Дополнения",
   ),
   CraftableModule(
     name: "Ингибитор",
@@ -1844,8 +1912,8 @@ final List<CraftableModule> modules = [
     icon: augmentIcon,
     byteCost: '1 000',
     ingredients: [zinc],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Дополнения",
   ),
   CraftableModule(
     name: "Модификатор выравнивания",
@@ -1854,8 +1922,8 @@ final List<CraftableModule> modules = [
     icon: augmentIcon,
     byteCost: '1 000',
     ingredients: [zinc],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Дополнения",
   ),
   CraftableModule(
     name: "Модификатор бура 1",
@@ -1864,8 +1932,8 @@ final List<CraftableModule> modules = [
     icon: augmentIcon,
     byteCost: '1 000',
     ingredients: [ceramics],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Дополнения",
   ),
   CraftableModule(
     name: "Модификатор бура 2",
@@ -1874,8 +1942,8 @@ final List<CraftableModule> modules = [
     icon: augmentIcon,
     byteCost: '2 500',
     ingredients: [tungstenCarbide],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Дополнения",
   ),
   CraftableModule(
     name: "Модификатор бура 3",
@@ -1884,8 +1952,8 @@ final List<CraftableModule> modules = [
     icon: augmentIcon,
     byteCost: '3 750',
     ingredients: [diamond],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Дополнения",
   ),
   CraftableModule(
     name: "Динамит",
@@ -1894,8 +1962,8 @@ final List<CraftableModule> modules = [
     icon: dynamiteIcon,
     byteCost: '3 750',
     ingredients: [explosivePowder],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Фейерверки",
@@ -1904,8 +1972,8 @@ final List<CraftableModule> modules = [
     icon: dynamiteIcon,
     byteCost: '3 750',
     ingredients: [explosivePowder],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Малая камера",
@@ -1914,8 +1982,8 @@ final List<CraftableModule> modules = [
     icon: cameraIcon,
     byteCost: '2 500',
     ingredients: [exoChip],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Малый гудок-труба",
@@ -1924,8 +1992,8 @@ final List<CraftableModule> modules = [
     icon: hornIcon,
     byteCost: '1 000',
     ingredients: [resin],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Виджеты",
   ),
   CraftableModule(
     name: "Малый гудок-пищалка",
@@ -1934,8 +2002,8 @@ final List<CraftableModule> modules = [
     icon: hornIcon,
     byteCost: 'Нельзя распечатать',
     ingredients: [nothing],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Виджеты",
   ),
   CraftableModule(
     name: "Голографич. фигура",
@@ -1944,8 +2012,8 @@ final List<CraftableModule> modules = [
     icon: figurineIcon,
     byteCost: '3 000',
     ingredients: [plastic],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Каменная фигура",
@@ -1954,8 +2022,8 @@ final List<CraftableModule> modules = [
     icon: figurineIcon,
     byteCost: 'Нельзя распечатать',
     ingredients: [nothing],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Коллекционные",
   ),
   CraftableModule(
     name: "Анализатор почвы",
@@ -1964,8 +2032,8 @@ final List<CraftableModule> modules = [
     icon: augmentIcon,
     byteCost: '2 000',
     ingredients: [zinc],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Дополнения",
   ),
   CraftableModule(
     name: "Сканер зондов",
@@ -1974,8 +2042,8 @@ final List<CraftableModule> modules = [
     icon: scannerIcon,
     byteCost: '4 000',
     ingredients: [steel],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Виджеты",
   ),
   CraftableModule(
     name: "Джетпак на твердом топливе",
@@ -1984,8 +2052,8 @@ final List<CraftableModule> modules = [
     icon: engineI,
     byteCost: '5 000',
     ingredients: [aluminiumAlloy],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Виджеты",
   ),
   CraftableModule(
     name: "Гидразиновый джетпак",
@@ -1994,8 +2062,8 @@ final List<CraftableModule> modules = [
     icon: engineI,
     byteCost: '15 000',
     ingredients: [titaniumAlloy],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Виджеты",
   ),
   CraftableModule(
     name: "Ховерборд",
@@ -2004,8 +2072,8 @@ final List<CraftableModule> modules = [
     icon: hoverboardIcon,
     byteCost: 'Разблокировывается в миссии',
     ingredients: [exoChip],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Мини-РТГ",
@@ -2014,8 +2082,8 @@ final List<CraftableModule> modules = [
     icon: generatorIcon,
     byteCost: 'Нельзя распечатать',
     ingredients: [nothing],
-    printerLevel: "Портативный",
-    category: "Прочее",
+    size: "Маленький",
+    category: "Мощность",
   ),
 
   CraftableModule(
@@ -2025,8 +2093,8 @@ final List<CraftableModule> modules = [
     icon: mediumIcon,
     byteCost: 'Разблокировано',
     ingredients: [compound, compound],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Модули",
   ),
   CraftableModule(
     name: "Генератор кислорода",
@@ -2035,8 +2103,8 @@ final List<CraftableModule> modules = [
     icon: oxygenatorIcon,
     byteCost: '1 800',
     ingredients: [aluminium, compound],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Модули",
   ),
   CraftableModule(
     name: "Средний шреддер",
@@ -2045,8 +2113,8 @@ final List<CraftableModule> modules = [
     icon: shredderIcon,
     byteCost: '1 250',
     ingredients: [iron, iron],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Модули",
   ),
   CraftableModule(
     name: "Полевое убежище",
@@ -2055,8 +2123,8 @@ final List<CraftableModule> modules = [
     icon: shelterIcon,
     byteCost: '8 000',
     ingredients: [silicone, graphene],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Модули",
   ),
   CraftableModule(
     name: "Авторука",
@@ -2065,8 +2133,8 @@ final List<CraftableModule> modules = [
     icon: shelterIcon,
     byteCost: '1 500',
     ingredients: [aluminium, graphite],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Модули",
   ),
   CraftableModule(
     name: "Средний контейнер ресурсов",
@@ -2075,8 +2143,8 @@ final List<CraftableModule> modules = [
     icon: canisterIcon,
     byteCost: '2 000',
     ingredients: [plastic, glass],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Хранилища",
   ),
   CraftableModule(
     name: "Средний контейнер для жидкостей и почвы",
@@ -2085,8 +2153,8 @@ final List<CraftableModule> modules = [
     icon: canisterIcon,
     byteCost: '2 500',
     ingredients: [plastic, glass],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Хранилища",
   ),
   CraftableModule(
     name: "Сенсор энергии",
@@ -2095,8 +2163,8 @@ final List<CraftableModule> modules = [
     icon: sensorIcon,
     byteCost: '500',
     ingredients: [zinc, copper],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Сенсор хранилища",
@@ -2105,8 +2173,8 @@ final List<CraftableModule> modules = [
     icon: sensorIcon,
     byteCost: '750',
     ingredients: [zinc, quartz],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Сенсор батареи",
@@ -2115,8 +2183,8 @@ final List<CraftableModule> modules = [
     icon: sensorIcon,
     byteCost: '750',
     ingredients: [zinc, graphite],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Кнопка повтора",
@@ -2125,8 +2193,8 @@ final List<CraftableModule> modules = [
     icon: sensorIcon,
     byteCost: '300',
     ingredients: [zinc],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Модуль близости",
@@ -2135,8 +2203,8 @@ final List<CraftableModule> modules = [
     icon: sensorIcon,
     byteCost: '700',
     ingredients: [zinc],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Модуль задержки",
@@ -2145,8 +2213,8 @@ final List<CraftableModule> modules = [
     icon: sensorIcon,
     byteCost: '1 000',
     ingredients: [zinc],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Счетный модуль",
@@ -2155,8 +2223,8 @@ final List<CraftableModule> modules = [
     icon: sensorIcon,
     byteCost: '1 000',
     ingredients: [zinc],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Удлиннители",
@@ -2165,8 +2233,8 @@ final List<CraftableModule> modules = [
     icon: extendersIcon,
     byteCost: '500',
     ingredients: [copper],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Мощность",
   ),
   CraftableModule(
     name: "Переключатель",
@@ -2175,8 +2243,8 @@ final List<CraftableModule> modules = [
     icon: splitterIcon,
     byteCost: '750',
     ingredients: [copper],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Мощность",
   ),
   CraftableModule(
     name: "Разветвитель",
@@ -2185,8 +2253,8 @@ final List<CraftableModule> modules = [
     icon: splitterIcon,
     byteCost: '1 000',
     ingredients: [copper, graphite],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Мощность",
   ),
   CraftableModule(
     name: "Средний генератор",
@@ -2195,8 +2263,8 @@ final List<CraftableModule> modules = [
     icon: generatorIcon,
     byteCost: '2 000',
     ingredients: [aluminium, tungsten],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Мощность",
   ),
   CraftableModule(
     name: "Средняя солнечная панель",
@@ -2205,8 +2273,8 @@ final List<CraftableModule> modules = [
     icon: solarPanelIcon,
     byteCost: '2 000',
     ingredients: [copper, glass],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Мощность",
   ),
   CraftableModule(
     name: "Средняя ветротурбина",
@@ -2215,8 +2283,8 @@ final List<CraftableModule> modules = [
     icon: windTurbineIcon,
     byteCost: '2 500',
     ingredients: [aluminium, ceramics],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Мощность",
   ),
   CraftableModule(
     name: "Средняя батарея",
@@ -2225,8 +2293,8 @@ final List<CraftableModule> modules = [
     icon: batteryIcon,
     byteCost: '3 750',
     ingredients: [lithium, zinc],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Мощность",
   ),
   CraftableModule(
     name: "РТГ",
@@ -2235,8 +2303,8 @@ final List<CraftableModule> modules = [
     icon: generatorIcon,
     byteCost: '12 500',
     ingredients: [nanocarbonAlloy, lithium],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Мощность",
   ),
   CraftableModule(
     name: "Средняя платформа A",
@@ -2245,8 +2313,8 @@ final List<CraftableModule> modules = [
     icon: platformIcon,
     byteCost: 'Разблокировано',
     ingredients: [resin],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Платформы",
   ),
   CraftableModule(
     name: "Средняя платформа B",
@@ -2255,8 +2323,8 @@ final List<CraftableModule> modules = [
     icon: platformIcon,
     byteCost: '250',
     ingredients: [resin, resin],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Платформы",
   ),
   CraftableModule(
     name: "Средняя платформа C",
@@ -2265,8 +2333,8 @@ final List<CraftableModule> modules = [
     icon: platformIcon,
     byteCost: '400',
     ingredients: [resin],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Платформы",
   ),
   CraftableModule(
     name: "Высокая платформа",
@@ -2275,8 +2343,8 @@ final List<CraftableModule> modules = [
     icon: platformIcon,
     byteCost: '750',
     ingredients: [ceramics],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Платформы",
   ),
   CraftableModule(
     name: "Средняя платформа T",
@@ -2285,8 +2353,8 @@ final List<CraftableModule> modules = [
     icon: platformIcon,
     byteCost: '750',
     ingredients: [ceramics],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Платформы",
   ),
   CraftableModule(
     name: "Средняя платформа T",
@@ -2295,8 +2363,8 @@ final List<CraftableModule> modules = [
     icon: platformIcon,
     byteCost: '400',
     ingredients: [resin, resin],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Платформы",
   ),
   CraftableModule(
     name: "Средний склад",
@@ -2305,8 +2373,8 @@ final List<CraftableModule> modules = [
     icon: storageIcon,
     byteCost: 'Разблокировано',
     ingredients: [resin, resin],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Хранилища",
   ),
   CraftableModule(
     name: "Средний амбар",
@@ -2315,8 +2383,8 @@ final List<CraftableModule> modules = [
     icon: storageIcon,
     byteCost: '3 000',
     ingredients: [titanium, titanium],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Хранилища",
   ),
   CraftableModule(
     name: "Высокий склад",
@@ -2325,8 +2393,8 @@ final List<CraftableModule> modules = [
     icon: storageIcon,
     byteCost: '400',
     ingredients: [ceramics],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Хранилища",
   ),
   CraftableModule(
     name: "Сиденье планетохода",
@@ -2335,8 +2403,8 @@ final List<CraftableModule> modules = [
     icon: seatIcon,
     byteCost: 'Разблокировано',
     ingredients: [compound, compound],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Трактор",
@@ -2345,8 +2413,8 @@ final List<CraftableModule> modules = [
     icon: roverIcon,
     byteCost: '1 000',
     ingredients: [aluminium, aluminium],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Прицеп",
@@ -2355,8 +2423,8 @@ final List<CraftableModule> modules = [
     icon: roverIcon,
     byteCost: '1 500',
     ingredients: [compound, aluminium],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Средний гудок для багги",
@@ -2365,8 +2433,8 @@ final List<CraftableModule> modules = [
     icon: hornIcon,
     byteCost: '2 000',
     ingredients: [compound, aluminium],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Подъемник",
@@ -2375,8 +2443,8 @@ final List<CraftableModule> modules = [
     icon: winchIcon,
     byteCost: '3 750',
     ingredients: [exoChip, rubber],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Инструменты",
   ),
   CraftableModule(
     name: "Укладчик",
@@ -2385,8 +2453,8 @@ final List<CraftableModule> modules = [
     icon: paverIcon,
     byteCost: '5 000',
     ingredients: [aluminiumAlloy, silicone],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Инструменты",
   ),
   CraftableModule(
     name: "Мощность бура 1",
@@ -2395,8 +2463,8 @@ final List<CraftableModule> modules = [
     icon: drillIcon,
     byteCost: '2 500',
     ingredients: [tungstenCarbide, ceramics],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Инструменты",
   ),
   CraftableModule(
     name: "Мощность бура 2",
@@ -2405,8 +2473,8 @@ final List<CraftableModule> modules = [
     icon: drillIcon,
     byteCost: '5 000',
     ingredients: [titaniumAlloy, tungstenCarbide],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Инструменты",
   ),
   CraftableModule(
     name: "Мощность бура 3",
@@ -2415,8 +2483,8 @@ final List<CraftableModule> modules = [
     icon: drillIcon,
     byteCost: '7 500',
     ingredients: [diamond, titaniumAlloy],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Инструменты",
   ),
   CraftableModule(
     name: "Двигатель на твердом топливе",
@@ -2425,8 +2493,8 @@ final List<CraftableModule> modules = [
     icon: engineI,
     byteCost: '500',
     ingredients: [aluminium, ammonium],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Гидразиновый двигатель",
@@ -2435,8 +2503,8 @@ final List<CraftableModule> modules = [
     icon: engineI,
     byteCost: '2 750',
     ingredients: [exoChip, steel],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Комплект ж/д точек",
@@ -2445,8 +2513,8 @@ final List<CraftableModule> modules = [
     icon: railPostIcon,
     byteCost: '750',
     ingredients: [resin, aluminium],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Комплект высоких ж/д точек",
@@ -2455,8 +2523,8 @@ final List<CraftableModule> modules = [
     icon: railPostIcon,
     byteCost: '750',
     ingredients: [resin, aluminium],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Комплект узловых ж/д точек",
@@ -2465,8 +2533,8 @@ final List<CraftableModule> modules = [
     icon: railPostIcon,
     byteCost: '1 000',
     ingredients: [aluminium, aluminium],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Детектор отказов",
@@ -2475,8 +2543,8 @@ final List<CraftableModule> modules = [
     icon: faultFinderIcon,
     byteCost: 'Разблокировывается в миссии',
     ingredients: [astronium, scrap],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Разное",
   ),
   CraftableModule(
     name: "RUBY",
@@ -2485,8 +2553,18 @@ final List<CraftableModule> modules = [
     icon: rubyI,
     byteCost: 'Разблокировывается в миссии',
     ingredients: [resin, quartz],
-    printerLevel: "Маленький",
-    category: "Прочее",
+    size: "Средний",
+    category: "Разное",
+  ),
+  CraftableModule(
+    name: "ЛРД",
+    description: "Чета делает",
+    image: sharikIcon,
+    icon: sharikIcon,
+    byteCost: 'Только найти в мире',
+    ingredients: [nothing],
+    size: "Средний",
+    category: "Коллекционные",
   ),
 
   CraftableModule(
@@ -2496,8 +2574,8 @@ final List<CraftableModule> modules = [
     icon: largeIcon,
     byteCost: 'Разблокировано',
     ingredients: [compound, compound, compound],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Модули",
   ),
   CraftableModule(
     name: "Плавильная печь",
@@ -2506,8 +2584,8 @@ final List<CraftableModule> modules = [
     icon: smeltingIcon,
     byteCost: '250',
     ingredients: [compound, resin, resin],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Модули",
   ),
   CraftableModule(
     name: "Центрифуга почвы",
@@ -2516,8 +2594,8 @@ final List<CraftableModule> modules = [
     icon: soilCentrifugeIcon,
     byteCost: '750',
     ingredients: [compound, compound, aluminium],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Модули",
   ),
   CraftableModule(
     name: "Химическая лаборатория",
@@ -2526,8 +2604,8 @@ final List<CraftableModule> modules = [
     icon: chemistryIcon,
     byteCost: '1 600',
     ingredients: [ceramics, glass, tungsten],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Модули",
   ),
   CraftableModule(
     name: "Атмосферный конденсатор",
@@ -2536,8 +2614,8 @@ final List<CraftableModule> modules = [
     icon: chemistryIcon,
     byteCost: '2 200',
     ingredients: [plastic, glass, iron],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Модули",
   ),
   CraftableModule(
     name: "Камера исследований",
@@ -2546,8 +2624,8 @@ final List<CraftableModule> modules = [
     icon: researchIcon,
     byteCost: 'Разблокировано',
     ingredients: [compound, compound, resin],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Модули",
   ),
   CraftableModule(
     name: "Платформа заказов EXO",
@@ -2556,8 +2634,8 @@ final List<CraftableModule> modules = [
     icon: tradeIcon,
     byteCost: 'Разблокировано',
     ingredients: [resin, resin, ceramics],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Модули",
   ),
   CraftableModule(
     name: "Платформа обмена",
@@ -2566,8 +2644,8 @@ final List<CraftableModule> modules = [
     icon: tradeIcon,
     byteCost: '2 500',
     ingredients: [iron, tungsten, exoChip],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Модули",
   ),
   CraftableModule(
     name: "Большой шреддер",
@@ -2576,8 +2654,8 @@ final List<CraftableModule> modules = [
     icon: shredderIcon,
     byteCost: '2 500',
     ingredients: [tungstenCarbide, iron, exoChip],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Модули",
   ),
   CraftableModule(
     name: "Большая солнечная панель",
@@ -2586,8 +2664,8 @@ final List<CraftableModule> modules = [
     icon: solarPanelIcon,
     byteCost: '4 000',
     ingredients: [aluminiumAlloy, glass, copper],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Мощность",
   ),
   CraftableModule(
     name: "Большая ветротурбина",
@@ -2596,8 +2674,8 @@ final List<CraftableModule> modules = [
     icon: windTurbineIcon,
     byteCost: '3 500',
     ingredients: [aluminiumAlloy, glass, ceramics],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Мощность",
   ),
   CraftableModule(
     name: "Большая платформа A",
@@ -2606,8 +2684,8 @@ final List<CraftableModule> modules = [
     icon: platformIcon,
     byteCost: 'Разблокировано',
     ingredients: [resin, resin],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Платформы",
   ),
   CraftableModule(
     name: "Большая платформа B",
@@ -2616,8 +2694,8 @@ final List<CraftableModule> modules = [
     icon: platformIcon,
     byteCost: '500',
     ingredients: [resin, resin, resin],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Платформы",
   ),
   CraftableModule(
     name: "Большая платформа C",
@@ -2626,8 +2704,8 @@ final List<CraftableModule> modules = [
     icon: platformIcon,
     byteCost: '1 000',
     ingredients: [resin, ceramics, iron],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Платформы",
   ),
   CraftableModule(
     name: "Большая платформа T",
@@ -2636,8 +2714,8 @@ final List<CraftableModule> modules = [
     icon: platformIcon,
     byteCost: '1 000',
     ingredients: [aluminium, aluminium, resin],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Платформы",
   ),
   CraftableModule(
     name: "Большая изогнутая платформа",
@@ -2646,8 +2724,8 @@ final List<CraftableModule> modules = [
     icon: platformIcon,
     byteCost: '1 000',
     ingredients: [compound, ceramics, ceramics],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Платформы",
   ),
   CraftableModule(
     name: "Расширенная платформа L",
@@ -2656,8 +2734,8 @@ final List<CraftableModule> modules = [
     icon: platformIcon,
     byteCost: '500',
     ingredients: [resin, resin],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Платформы",
   ),
   CraftableModule(
     name: "Большой контейнер ресурсов",
@@ -2666,8 +2744,8 @@ final List<CraftableModule> modules = [
     icon: canisterIcon,
     byteCost: '5 000',
     ingredients: [glass, titanium, nanocarbonAlloy],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Хранилища",
   ),
   CraftableModule(
     name: "Большой склад",
@@ -2676,8 +2754,8 @@ final List<CraftableModule> modules = [
     icon: storageIcon,
     byteCost: '2 000',
     ingredients: [ceramics, ceramics, ceramics],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Хранилища",
   ),
   CraftableModule(
     name: "Большой амбар A",
@@ -2686,8 +2764,8 @@ final List<CraftableModule> modules = [
     icon: storageIcon,
     byteCost: '5 000',
     ingredients: [aluminium, aluminium, steel],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Хранилища",
   ),
   CraftableModule(
     name: "Большой амбар B",
@@ -2696,8 +2774,8 @@ final List<CraftableModule> modules = [
     icon: storageIcon,
     byteCost: '7 500',
     ingredients: [steel, steel, steel],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Хранилища",
   ),
   CraftableModule(
     name: "Вагонетка",
@@ -2706,8 +2784,8 @@ final List<CraftableModule> modules = [
     icon: roverIcon,
     byteCost: '1 500',
     ingredients: [compound, aluminium],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Большое сиденье планетохода",
@@ -2716,8 +2794,8 @@ final List<CraftableModule> modules = [
     icon: seatIcon,
     byteCost: '2 000',
     ingredients: [plastic, plastic, compound],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Средний планетоход",
@@ -2726,8 +2804,8 @@ final List<CraftableModule> modules = [
     icon: roverIcon,
     byteCost: '3 750',
     ingredients: [plastic, plastic, rubber],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Кран",
@@ -2736,8 +2814,8 @@ final List<CraftableModule> modules = [
     icon: craneIcon,
     byteCost: '4 500',
     ingredients: [plastic, plastic, rubber],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Инструменты",
   ),
   CraftableModule(
     name: "Большой туманный горн",
@@ -2746,18 +2824,8 @@ final List<CraftableModule> modules = [
     icon: hornIcon,
     byteCost: '4 000',
     ingredients: [plastic, rubber, steel],
-    printerLevel: "Средний",
-    category: "Прочее",
-  ),
-  CraftableModule(
-    name: "Большой звездный горн",
-    description: "Чета делает",
-    image: hornIcon,
-    icon: hornIcon,
-    byteCost: 'Нельзя распечатать',
-    ingredients: [nothing],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Разное",
   ),
   CraftableModule(
     name: "СВВП",
@@ -2766,8 +2834,8 @@ final List<CraftableModule> modules = [
     icon: vtolIcon,
     byteCost: 'Разблокировывается в миссии',
     ingredients: [tungstenCarbide, silicone, exoChip],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Сфера для отдыха",
@@ -2776,8 +2844,8 @@ final List<CraftableModule> modules = [
     icon: sharikIcon,
     byteCost: '4 500',
     ingredients: [aluminiumAlloy, rubber],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Локомотив",
@@ -2786,8 +2854,8 @@ final List<CraftableModule> modules = [
     icon: railEngineIcon,
     byteCost: '1 000',
     ingredients: [resin, aluminium, copper],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "C.O.L.E.",
@@ -2796,8 +2864,8 @@ final List<CraftableModule> modules = [
     icon: railEngineIcon,
     byteCost: 'Дается в награду в миссии',
     ingredients: [nothing],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Вагон",
@@ -2806,8 +2874,8 @@ final List<CraftableModule> modules = [
     icon: railEngineIcon,
     byteCost: '1 500',
     ingredients: [resin, resin, aluminium],
-    printerLevel: "Средний",
-    category: "Прочее",
+    size: "Большой",
+    category: "Транспорт",
   ),
 
   CraftableModule(
@@ -2817,8 +2885,8 @@ final List<CraftableModule> modules = [
     icon: shelterIcon,
     byteCost: 'Разблокировано',
     ingredients: [plastic, plastic, silicone, silicone],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Модули",
   ),
   CraftableModule(
     name: "Автоэкстрактор",
@@ -2827,18 +2895,18 @@ final List<CraftableModule> modules = [
     icon: autoextractorIcon,
     byteCost: '7 500',
     ingredients: [tungstenCarbide, rubber, steel, exoChip],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Модули",
   ),
   CraftableModule(
-    name: "Огромныый шреддер",
+    name: "Огромный шреддер",
     description: "Чета делает",
     image: autoextractorIcon,
     icon: autoextractorIcon,
     byteCost: '5 000',
     ingredients: [tungstenCarbide, steel, exoChip, exoChip],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Модули",
   ),
   CraftableModule(
     name: "Солнечный массив",
@@ -2847,8 +2915,8 @@ final List<CraftableModule> modules = [
     icon: solarPanelIcon,
     byteCost: '6 000',
     ingredients: [tungstenCarbide, steel, exoChip, exoChip],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Мощность",
   ),
   CraftableModule(
     name: "Ветротурбина XL",
@@ -2857,8 +2925,8 @@ final List<CraftableModule> modules = [
     icon: windTurbineIcon,
     byteCost: '4 500',
     ingredients: [iron, ceramics, graphene, aluminiumAlloy],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Мощность",
   ),
   CraftableModule(
     name: "Средняя сенсорная дуга",
@@ -2867,8 +2935,8 @@ final List<CraftableModule> modules = [
     icon: sensorIcon,
     byteCost: '500',
     ingredients: [zinc, quartz],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Сенсорная дуга XL",
@@ -2877,8 +2945,8 @@ final List<CraftableModule> modules = [
     icon: sensorIcon,
     byteCost: '1 000',
     ingredients: [zinc, zinc, quartz, quartz],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Сенсорный навес XL",
@@ -2887,8 +2955,8 @@ final List<CraftableModule> modules = [
     icon: sensorIcon,
     byteCost: '1 000',
     ingredients: [zinc, zinc, quartz, quartz],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Большое сенсорное кольцо",
@@ -2897,8 +2965,8 @@ final List<CraftableModule> modules = [
     icon: sensorIcon,
     byteCost: '500',
     ingredients: [zinc, quartz],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Большое сенсорное кольцо A",
@@ -2907,8 +2975,8 @@ final List<CraftableModule> modules = [
     icon: sensorIcon,
     byteCost: '750',
     ingredients: [zinc, quartz, quartz],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Большое сенсорное кольцо B",
@@ -2917,8 +2985,8 @@ final List<CraftableModule> modules = [
     icon: sensorIcon,
     byteCost: '750',
     ingredients: [zinc, zinc, quartz],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Сенсорное кольцо A (XL)",
@@ -2927,8 +2995,8 @@ final List<CraftableModule> modules = [
     icon: sensorIcon,
     byteCost: '750',
     ingredients: [zinc, zinc, quartz, quartz],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Сенсорное кольцо B (XL)",
@@ -2937,8 +3005,8 @@ final List<CraftableModule> modules = [
     icon: sensorIcon,
     byteCost: '1 000',
     ingredients: [zinc, zinc, zinc, quartz],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Разное",
   ),
   CraftableModule(
     name: "Особо большая платформа A",
@@ -2947,8 +3015,8 @@ final List<CraftableModule> modules = [
     icon: platformIcon,
     byteCost: '2 000',
     ingredients: [iron, iron, ceramics, ceramics],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Платформы",
   ),
   CraftableModule(
     name: "Особо большая платформа B",
@@ -2957,8 +3025,8 @@ final List<CraftableModule> modules = [
     icon: platformIcon,
     byteCost: '3 000',
     ingredients: [iron, iron, iron, iron],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Платформы",
   ),
   CraftableModule(
     name: "Особо большая платформа C",
@@ -2967,8 +3035,8 @@ final List<CraftableModule> modules = [
     icon: platformIcon,
     byteCost: '2 000',
     ingredients: [resin, resin, iron, iron],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Платформы",
   ),
   CraftableModule(
     name: "Особо большая изогнутая платформа",
@@ -2977,8 +3045,8 @@ final List<CraftableModule> modules = [
     icon: platformIcon,
     byteCost: '2 000',
     ingredients: [ceramics, ceramics, compound, compound],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Платформы",
   ),
   CraftableModule(
     name: "Расширенная платформа XL",
@@ -2987,8 +3055,8 @@ final List<CraftableModule> modules = [
     icon: platformIcon,
     byteCost: '750',
     ingredients: [resin, resin, resin],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Платформы",
   ),
   CraftableModule(
     name: "Платформа для фигур",
@@ -2997,8 +3065,8 @@ final List<CraftableModule> modules = [
     icon: platformIcon,
     byteCost: '3 000',
     ingredients: [iron, iron, iron, iron],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Платформы",
   ),
   CraftableModule(
     name: "Особо большой склад",
@@ -3007,8 +3075,8 @@ final List<CraftableModule> modules = [
     icon: storageIcon,
     byteCost: '2 000',
     ingredients: [iron, iron, ceramics, ceramics],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Хранилища",
   ),
   CraftableModule(
     name: "Большой планетоход",
@@ -3017,8 +3085,8 @@ final List<CraftableModule> modules = [
     icon: roverIcon,
     byteCost: '5 000',
     ingredients: [aluminiumAlloy, rubber, exoChip, exoChip],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Место приземления",
@@ -3027,8 +3095,8 @@ final List<CraftableModule> modules = [
     icon: landingIcon,
     byteCost: '750',
     ingredients: [aluminium, ceramics, ceramics],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Малый шаттл",
@@ -3037,8 +3105,8 @@ final List<CraftableModule> modules = [
     icon: shuttleIcon,
     byteCost: '1 500',
     ingredients: [aluminium, aluminium],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Средний шаттл",
@@ -3047,8 +3115,8 @@ final List<CraftableModule> modules = [
     icon: shuttleIcon,
     byteCost: '3 750',
     ingredients: [aluminiumAlloy, ceramics, ceramics],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Большой шаттл",
@@ -3057,8 +3125,8 @@ final List<CraftableModule> modules = [
     icon: shuttleIcon,
     byteCost: '5 000',
     ingredients: [titaniumAlloy, ceramics, exoChip, exoChip],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Транспорт",
   ),
   CraftableModule(
     name: "Ж/Д станция",
@@ -3067,7 +3135,7 @@ final List<CraftableModule> modules = [
     icon: railStationIcon,
     byteCost: '2 500',
     ingredients: [titanium, titanium, copper, quartz],
-    printerLevel: "Большой",
-    category: "Прочее",
+    size: "Очень большой",
+    category: "Транспорт",
   ),
 ];

@@ -42,6 +42,7 @@ class MyApp extends StatelessWidget {
           labelLarge: TextStyle(color: Colors.white),
           labelMedium: TextStyle(color: Colors.white),
           labelSmall: TextStyle(color: Colors.white),
+          
         ),
       ),
     );

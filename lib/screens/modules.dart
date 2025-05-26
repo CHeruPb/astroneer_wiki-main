@@ -18,12 +18,16 @@ class _GameItemsScreenState extends State<GameItemsScreen> {
   List<String> categories = [
     'Инструменты',
     'Транспорт',
-    'Модули',
+    'Модули', 
+    'Хранилища', 
+    'Платформы',
+    'Виджеты',
     'Дополнения',
     'Мощность',
-    'Прочее',
+    'Коллекционные',
+    'Разное'
   ];
-  List<String> printers = ['Портативный', 'Маленький', 'Средний', 'Большой'];
+  List<String> printers = ['Маленький', 'Средний', 'Большой', 'Очень большой'];
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +36,7 @@ class _GameItemsScreenState extends State<GameItemsScreen> {
           final byCategory =
               selectedCategory == null || item.category == selectedCategory;
           final byPrinter =
-              selectedPrinter == null || item.printerLevel == selectedPrinter;
+              selectedPrinter == null || item.size == selectedPrinter;
           return byCategory && byPrinter;
         }).toList();
 
@@ -160,7 +164,7 @@ class _GameItemsScreenState extends State<GameItemsScreen> {
                         }).toList(),
                   ),
                   const SizedBox(height: 12),
-                  const Text('Уровень принтера'),
+                  const Text('Размер'),
                   Wrap(
                     spacing: 8,
                     children:

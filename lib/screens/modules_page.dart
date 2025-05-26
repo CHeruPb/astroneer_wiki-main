@@ -44,7 +44,7 @@ class ModulePage extends StatelessWidget {
                     child: Column(
                       children: [
                         Text('${module.description}'),
-                        Text('Требуемый принтер: ${module.printerLevel}'),
+                        Text('Размер: ${module.size}'),
                         Text('Категория: ${module.category}'),
                         Text('Стоимость разблокировки: ${module.byteCost}'),
                       ],

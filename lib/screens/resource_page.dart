@@ -53,16 +53,6 @@ class ResourceDetailPage extends StatelessWidget {
                 ...resource.obtainedFrom,
               ],
             ),
-
-            const SizedBox(height: 16),
-
-            RequirementTab(
-              title: 'Используется в',
-              children: [
-                SizedBox(height: 8,),
-                ...resource.usedIn
-              ]
-            ),
             const SizedBox(height: 16),
           ],
         ),
